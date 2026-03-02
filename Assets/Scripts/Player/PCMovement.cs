@@ -5,9 +5,9 @@ using UnityEngine;
 public class PCMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public Transform orientation;
 
     private Rigidbody rb;
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -15,19 +15,29 @@ public class PCMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Direction variables
         Vector3 moveDirection = Vector3.zero;
+        Vector3 forward = orientation.forward;
+        Vector3 right = orientation.right;
 
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        // Input
         if (InputManager.Instance.IsMovingUp())
-            moveDirection += transform.forward;
+            moveDirection += forward;
 
         if (InputManager.Instance.IsMovingDown())
-            moveDirection -= transform.forward;
+            moveDirection -= forward;
 
         if (InputManager.Instance.IsMovingLeft())
-            moveDirection -= transform.right;
+            moveDirection -= right;
 
         if (InputManager.Instance.IsMovingRight())
-            moveDirection += transform.right;
+            moveDirection += right;
 
         moveDirection.Normalize();
 

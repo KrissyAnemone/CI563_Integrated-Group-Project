@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  orientation: {fileID: 8683591207182413721}
 --- !u!114 &4911485509699078967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 5217617236529896536}
   ori: {fileID: 8683591207182413721}
-  mouseSensitivity: 75
+  mouseSensitivity: 125
 --- !u!1 &3377902407926379260
 GameObject:
   m_ObjectHideFlags: 0
