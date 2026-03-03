@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
 
+    // You can change keybindings through these variables
     public KeyCode forward = KeyCode.W;
     public KeyCode backward = KeyCode.S;
     public KeyCode left = KeyCode.A;
