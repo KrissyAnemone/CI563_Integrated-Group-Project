@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560399447}
   - component: {fileID: 560399449}
+  - component: {fileID: 560399450}
   - component: {fileID: 560399448}
   m_Layer: 5
   m_Name: Content
@@ -185,8 +186,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 50
-    height: 50
+    width: 200
+    height: 200
+  scrollView: {fileID: 2000453683}
+  zoomOutScale: 0.5
 --- !u!222 &560399449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -195,6 +198,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560399446}
   m_CullTransparentMesh: 1
+--- !u!225 &560399450
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560399446}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &597830250
 GameObject:
   m_ObjectHideFlags: 0
