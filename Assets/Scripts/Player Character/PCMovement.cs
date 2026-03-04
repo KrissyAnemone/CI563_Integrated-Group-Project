@@ -8,6 +8,7 @@ public class PCMovement : MonoBehaviour
     public Transform orientation;
 
     private Rigidbody rb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

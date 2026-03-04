@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class MinimapController : MonoBehaviour
 {
+    [Header("Map/Player Tracking")]
     public Transform player;
     public RectTransform mapRect;
     public Rect mapSize = new(0, 0, 50, 50);
 
+    [Header("Scanner Input")]
     public RectTransform scrollView;
+
+    private Vector2 oriAnchorMin;
+    private Vector2 oriAnchorMax;
+    private Vector2 oriPivot;
+    private Vector2 oriAnchorPos;
 
     private float mapWidth;
     private float mapHeight;
@@ -24,6 +31,11 @@ public class MinimapController : MonoBehaviour
         mapHeight = mapRect.rect.height;
 
         isMapSized = false;
+
+        oriAnchorMin = new Vector2(scrollView.anchorMin.x, scrollView.anchorMin.y);
+        oriAnchorMax = new Vector2(scrollView.anchorMax.x, scrollView.anchorMax.y);
+        oriPivot = new Vector2(scrollView.pivot.x, scrollView.pivot.y);
+        oriAnchorPos = new Vector2(scrollView.anchoredPosition.x, scrollView.anchoredPosition.y);
     }
 
     // Update is called once per frame
@@ -34,7 +46,7 @@ public class MinimapController : MonoBehaviour
         if (InputManager.Instance.IsScannerDown())
         {
             Debug.Log("On");
-            isMapSized = true;
+            isMapSized = false;
 
             UpdateSize();
         }
@@ -42,7 +54,9 @@ public class MinimapController : MonoBehaviour
         if (InputManager.Instance.IsScannerUp())
         {
             Debug.Log("Off");
-            isMapSized = false;
+            isMapSized = true;
+
+            UpdateSize();
         }
     }
 
@@ -66,6 +80,23 @@ public class MinimapController : MonoBehaviour
 
     private void UpdateSize()
     {
+        if (!isMapSized)
+        {
+            // New position to middle of the screen
+            scrollView.anchorMin = new Vector2(0.5f, 0.5f);
+            scrollView.anchorMax = new Vector2(0.5f, 0.5f);
+            scrollView.pivot = new Vector2(0.5f, 0.5f);
 
+            scrollView.anchoredPosition = new Vector2(0f, 0f);
+        }
+        else
+        {
+            // Reverting to old position
+            scrollView.anchorMin = oriAnchorMin;
+            scrollView.anchorMax = oriAnchorMax;
+            scrollView.pivot = oriPivot;
+
+            scrollView.anchoredPosition = oriAnchorPos;
+        }
     }
 }
