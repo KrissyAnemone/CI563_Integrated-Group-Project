@@ -9,8 +9,12 @@ public class MinimapController : MonoBehaviour
     public RectTransform mapRect;
     public Rect mapSize = new(0, 0, 50, 50);
 
+    public RectTransform scrollView;
+
     private float mapWidth;
     private float mapHeight;
+
+    private bool isMapSized;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +22,31 @@ public class MinimapController : MonoBehaviour
         // Get map size from mapRect
         mapWidth = mapRect.rect.width;
         mapHeight = mapRect.rect.height;
+
+        isMapSized = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateMiniMap();
+
+        if (InputManager.Instance.IsScannerDown())
+        {
+            Debug.Log("On");
+            isMapSized = true;
+
+            UpdateSize();
+        }
+
+        if (InputManager.Instance.IsScannerUp())
+        {
+            Debug.Log("Off");
+            isMapSized = false;
+        }
     }
 
-    void UpdateMiniMap()
+    private void UpdateMiniMap()
     {
         // Get player world position
         float playerX = player.position.x;
@@ -42,5 +62,10 @@ public class MinimapController : MonoBehaviour
 
         // Move map in opposite direction to center player
         mapRect.anchoredPosition = new Vector2(-mapPosX + mapWidth / 2f, -mapPosY + mapHeight / 2f);
+    }
+
+    private void UpdateSize()
+    {
+
     }
 }
