@@ -12,41 +12,49 @@ public class MinimapController : MonoBehaviour
 
     [Header("Scanner Input")]
     public RectTransform scrollView;
+    public float zoomOutScale;
 
+    // Scanner Input
+    private CanvasGroup canvasGroup;
     private Vector2 oriAnchorMin;
     private Vector2 oriAnchorMax;
     private Vector2 oriPivot;
     private Vector2 oriAnchorPos;
 
+    private bool isMapResized;
+
+    // Map/Player Tracking
     private float mapWidth;
     private float mapHeight;
 
-    private bool isMapSized;
-
-    // Start is called before the first frame update
     void Start()
     {
-        // Get map size from mapRect
+        // Getting map size from mapRect
         mapWidth = mapRect.rect.width;
         mapHeight = mapRect.rect.height;
 
-        isMapSized = false;
+        // Setting if the minimap has been resized to false
+        isMapResized = false;
 
+        // Storing the minimap's position values
         oriAnchorMin = new Vector2(scrollView.anchorMin.x, scrollView.anchorMin.y);
         oriAnchorMax = new Vector2(scrollView.anchorMax.x, scrollView.anchorMax.y);
         oriPivot = new Vector2(scrollView.pivot.x, scrollView.pivot.y);
         oriAnchorPos = new Vector2(scrollView.anchoredPosition.x, scrollView.anchoredPosition.y);
+
+        // Getting CanvasGroup
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateMiniMap();
 
+        // Checking for input
         if (InputManager.Instance.IsScannerDown())
         {
             Debug.Log("On");
-            isMapSized = false;
+            isMapResized = false;
 
             UpdateSize();
         }
@@ -54,7 +62,7 @@ public class MinimapController : MonoBehaviour
         if (InputManager.Instance.IsScannerUp())
         {
             Debug.Log("Off");
-            isMapSized = true;
+            isMapResized = true;
 
             UpdateSize();
         }
@@ -80,23 +88,37 @@ public class MinimapController : MonoBehaviour
 
     private void UpdateSize()
     {
-        if (!isMapSized)
+        if (!isMapResized)
         {
-            // New position to middle of the screen
+            // New centre position
             scrollView.anchorMin = new Vector2(0.5f, 0.5f);
             scrollView.anchorMax = new Vector2(0.5f, 0.5f);
             scrollView.pivot = new Vector2(0.5f, 0.5f);
 
             scrollView.anchoredPosition = new Vector2(0f, 0f);
+
+            // New map scaling
+            scrollView.GetComponent<RectTransform>().localScale = new Vector2(5.5f, 5.5f);
+            gameObject.GetComponent<RectTransform>().localScale = new Vector2(zoomOutScale, zoomOutScale);
+
+            // New alpha
+            canvasGroup.alpha = 0.5f;
         }
         else
         {
-            // Reverting to old position
+            // Reverting positions
             scrollView.anchorMin = oriAnchorMin;
             scrollView.anchorMax = oriAnchorMax;
             scrollView.pivot = oriPivot;
 
             scrollView.anchoredPosition = oriAnchorPos;
+
+            // Reverting scales
+            scrollView.GetComponent<RectTransform>().localScale = new Vector2(2f, 2f);
+            gameObject.GetComponent<RectTransform>().localScale = new Vector2(1f, 1f);
+
+            // Reverting alpha
+            canvasGroup.alpha = 1f;
         }
     }
 }
