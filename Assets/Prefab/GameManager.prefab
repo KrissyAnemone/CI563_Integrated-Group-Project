@@ -65,5 +65,5 @@ MonoBehaviour:
   spaceWidth: 1
   boardWidth: 100
   boardHeight: 100
-  mineCount: 50
+  mineCount: 5000
   playerStart: {x: 50, y: 50}

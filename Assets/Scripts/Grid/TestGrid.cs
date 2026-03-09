@@ -6,13 +6,7 @@ using UnityEngine;
 public class TestGrid : MonoBehaviour
 {
     Grid grid = new Grid();
-    public int[,] ints =
-    {
-        {1,0,1,1,0,0,0 },
-        {0,0,1,0,0,0,0 },
-        {0,1,0,0,0,0,0 },
-        {1,0,0,0,1,0,1 }
-    };
+    public int[,] ints;
 
     public float spaceWidth;
     public int boardWidth;
