@@ -44,6 +44,9 @@ public class MinimapController : MonoBehaviour
 
         // Getting CanvasGroup
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
+
+        // Reverting alpha
+        canvasGroup.alpha = 0f;
     }
 
     void Update()
@@ -102,7 +105,7 @@ public class MinimapController : MonoBehaviour
             gameObject.GetComponent<RectTransform>().localScale = new Vector2(zoomOutScale, zoomOutScale);
 
             // New alpha
-            canvasGroup.alpha = 0.5f;
+            canvasGroup.alpha = 0.75f;
         }
         else
         {
@@ -118,7 +121,7 @@ public class MinimapController : MonoBehaviour
             gameObject.GetComponent<RectTransform>().localScale = new Vector2(1f, 1f);
 
             // Reverting alpha
-            canvasGroup.alpha = 1f;
+            canvasGroup.alpha = 0f;
         }
     }
 }
