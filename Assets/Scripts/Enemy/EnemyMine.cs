@@ -6,16 +6,18 @@ public enum MineState
 {
     Idle,
     Search,
-    Chase,
     ReturnHome,
+    Chase,
     Explode
 }
 
 public class EnemyMine : MonoBehaviour
 {
     public Transform player;
+    public Transform enemyHome;
     public MineState currentState = MineState.Idle;
     public float moveSpeed = 3f;
+    public float waitTarget = 3f;
 
     public Grid grid;
 
@@ -52,6 +54,9 @@ public class EnemyMine : MonoBehaviour
             case MineState.Search:
                 Search();
                 break;
+            case MineState.ReturnHome:
+                ReturnHome();
+                break;
         }
     }
 
@@ -62,9 +67,13 @@ public class EnemyMine : MonoBehaviour
 
     void Search()
     {
-        if (currentPath == null || pathIndex >= currentPath.Count)
+        if (currentPath == null)
+            return;
+
+        if (pathIndex >= currentPath.Count)
         {
-            currentState = MineState.Idle;
+            StartCoroutine(WaitThenReturn());
+            currentPath = null;
             return;
         }
 
@@ -78,7 +87,7 @@ public class EnemyMine : MonoBehaviour
             pathIndex++;
     }
 
-    void BeginSearch(Vector2Int target)
+    void BeginPath(Vector2Int target)
     {
         UpdateGridPos();
 
@@ -119,6 +128,25 @@ public class EnemyMine : MonoBehaviour
         return new Vector3(gridPos.x * grid.spaceWidth, transform.position.y, gridPos.y * grid.spaceWidth);
     }
 
+    void ReturnHome()
+    {
+        if (currentPath != null)
+            return;
+
+        Vector2Int homeGrid = WorldToGrid(enemyHome.position);
+
+        BeginPath(homeGrid);
+    }
+
+    IEnumerator WaitThenReturn()
+    {
+        currentState = MineState.Idle;
+
+        yield return new WaitForSeconds(waitTarget);
+
+        currentState = MineState.ReturnHome;
+    }
+
     void TestInput()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -127,7 +155,7 @@ public class EnemyMine : MonoBehaviour
 
             //Debug.Log("Player Grid: " + noiseGrid);
 
-            BeginSearch(noiseGrid);
+            BeginPath(noiseGrid);
         }
     }
 }
