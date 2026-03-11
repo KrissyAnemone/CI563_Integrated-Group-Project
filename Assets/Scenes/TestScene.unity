@@ -122,6 +122,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &30730357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 214084392948369259, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+  m_PrefabInstance: {fileID: 5916216105630144788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &30730360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30730357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbac8a3d7ed1b2145a473e6cd81a8f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapObj: {fileID: 1496567154}
 --- !u!4 &534432045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
@@ -644,7 +662,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1083,7 +1101,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 214084392948369259, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 30730360}
   m_SourcePrefab: {fileID: 100100000, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
