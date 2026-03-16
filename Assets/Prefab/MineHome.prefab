@@ -150,11 +150,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b30d00d0e006443b3866dac48152f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   enemyHome: {fileID: 5755419077574837080}
   currentState: 0
   moveSpeed: 3
   waitTarget: 3
+  hearingDistance: 6
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  viewDistance: 20
+  viewAngle: 90
+  player: {fileID: 0}
 --- !u!1 &9097113119117216502
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,20 +13,36 @@ public enum MineState
 
 public class EnemyMine : MonoBehaviour
 {
-    public Transform player;
+    [Header("Enemy Stats")]
     public Transform enemyHome;
     public MineState currentState = MineState.Idle;
     public float moveSpeed = 3f;
     public float waitTarget = 3f;
+    public float hearingDistance = 6f;
 
+    [Header("Enemy Vision")]
+    public LayerMask obstacleMask;
+    public LayerMask playerMask;
+    public float viewDistance = 12f;
+    public float viewAngle = 100f;
+
+    [Header("Other Object")]
+    public Transform player;
     public Grid grid;
 
+    // Pathfinding
     private EnemyPathfinding pathfinder;
     private List<Vector2Int> currentPath;
     private int pathIndex;
 
-    Vector2Int currentGridPos;
-    Vector2Int targetGridPos;
+    // Grid Positions
+    private Vector2Int currentGridPos;
+    private Vector2Int targetGridPos;
+    private Vector2Int lastPlayerGrid;
+
+    // Chase
+    private float chaseTimer;
+    private float chaseUpdateRate = 0.5f;
 
     void Start()
     {
@@ -43,7 +59,17 @@ public class EnemyMine : MonoBehaviour
 
     void Update()
     {
-        TestInput();
+        UpdateGridPos();
+
+        if (CanSeePlayer())
+        {
+            currentState = MineState.Chase;
+        }
+        else if (CanHearPlayer())
+        {
+            Vector2Int noiseGrid = WorldToGrid(player.position);
+            BeginPath(noiseGrid);
+        }
 
         switch (currentState)
         {
@@ -54,8 +80,13 @@ public class EnemyMine : MonoBehaviour
             case MineState.Search:
                 Search();
                 break;
+
             case MineState.ReturnHome:
                 ReturnHome();
+                break;
+
+            case MineState.Chase:
+                ChasePC();
                 break;
         }
     }
@@ -80,6 +111,14 @@ public class EnemyMine : MonoBehaviour
         Vector2Int nextTile = currentPath[pathIndex];
 
         Vector3 targetWorld = GridToWorld(nextTile);
+
+        Vector3 moveDir = (targetWorld - transform.position);
+
+        if (moveDir != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(moveDir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 8f * Time.deltaTime);
+        }
 
         transform.position = Vector3.MoveTowards(transform.position, targetWorld, moveSpeed * Time.deltaTime);
 
@@ -147,15 +186,77 @@ public class EnemyMine : MonoBehaviour
         currentState = MineState.ReturnHome;
     }
 
-    void TestInput()
+    void ChasePC()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        chaseTimer -= Time.deltaTime;
+
+        if (chaseTimer <= 0f)
         {
-            Vector2Int noiseGrid = WorldToGrid(player.position);
+            Vector2Int playerGrid = WorldToGrid(player.position);
 
-            //Debug.Log("Player Grid: " + noiseGrid);
+            if (playerGrid != lastPlayerGrid)
+            {
+                BeginPath(playerGrid);
+                lastPlayerGrid = playerGrid;
+            }
 
-            BeginPath(noiseGrid);
+            chaseTimer = chaseUpdateRate;
         }
+
+        Search();
+    }
+
+    bool CanSeePlayer()
+    {
+        Vector3 origin = transform.position + Vector3.down * 0.5f;
+        Vector3 target = player.position + Vector3.up * 0.9f;
+
+        Vector3 dirPlayer = (target - origin);
+        float distance = dirPlayer.magnitude;
+        dirPlayer.Normalize();
+
+        if (distance > viewDistance)
+            return false;
+
+        dirPlayer.Normalize();
+
+        float angle = Vector3.Angle(transform.forward, dirPlayer);
+
+        if (angle > viewAngle * 0.5f)
+            return false;
+
+        if (Physics.Raycast(origin, dirPlayer, out RaycastHit hit, viewDistance, obstacleMask | playerMask))
+        {
+            if (hit.transform == player)
+                return true;
+        }
+
+        return false;
+    }
+
+    bool CanHearPlayer()
+    {
+        float dist = Vector3.Distance(transform.position, player.position);
+
+        PCMovement pc = player.GetComponent<PCMovement>();
+
+        if (pc.IsCrouching)
+            return false;
+
+        return dist < hearingDistance;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, viewDistance);
+
+        Vector3 left = Quaternion.Euler(0, -viewAngle * 0.5f, 0) * transform.forward;
+        Vector3 right = Quaternion.Euler(0, viewAngle * 0.5f, 0) * transform.forward;
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, left * viewDistance);
+        Gizmos.DrawRay(transform.position, right * viewDistance);
+        Gizmos.DrawRay(transform.position, transform.forward * viewDistance);
     }
 }
