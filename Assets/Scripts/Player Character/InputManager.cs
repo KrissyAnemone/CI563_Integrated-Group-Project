@@ -12,8 +12,6 @@ public class InputManager : MonoBehaviour
     public KeyCode left = KeyCode.A;
     public KeyCode right = KeyCode.D;
 
-    public KeyCode crouch = KeyCode.LeftControl;
-
     public KeyCode scanner = KeyCode.Tab;
 
     private void Awake()
@@ -33,9 +31,6 @@ public class InputManager : MonoBehaviour
     public bool IsMovingDown() => Input.GetKey(backward);
     public bool IsMovingLeft() => Input.GetKey(left);
     public bool IsMovingRight() => Input.GetKey(right);
-
-    // Crouch
-    public bool IsCrouching() => Input.GetKey(crouch);
 
     // UI controls
     public bool IsScannerDown() => Input.GetKeyDown(scanner);

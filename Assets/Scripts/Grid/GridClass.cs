@@ -4,9 +4,9 @@ public enum occupier { Mine, Empty }
 public class Grid
 {
     int layer = -1; // Default layer - change upon loading if implementing layers
-    public float spaceWidth;
-    public int layerWidth;
-    public int layerHeight;
+    public float spaceWidth = 20;
+    public int layerWidth = -1;
+    public int layerHeight = -1;
 
     public Space GetSpace(int x, int z) { return spaces[x, z]; }
     Space[,] spaces = null;
