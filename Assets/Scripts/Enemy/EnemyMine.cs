@@ -18,13 +18,14 @@ public class EnemyMine : MonoBehaviour
     public MineState currentState = MineState.Idle;
     public float moveSpeed = 3f;
     public float waitTarget = 3f;
-    public float hearingDistance = 6f;
+    public float hearDis = 6f;
 
     [Header("Enemy Vision")]
     public LayerMask obstacleMask;
     public LayerMask playerMask;
-    public float viewDistance = 12f;
-    public float viewAngle = 100f;
+    public float viewDis = 12f;
+    public float explodeDis = 5f;
+    public float viewAngle = 180f;
 
     [Header("Other Object")]
     public Transform player;
@@ -59,6 +60,8 @@ public class EnemyMine : MonoBehaviour
 
     void Update()
     {
+        TestInput();
+
         UpdateGridPos();
 
         if (CanSeePlayer())
@@ -201,6 +204,7 @@ public class EnemyMine : MonoBehaviour
             }
 
             chaseTimer = chaseUpdateRate;
+             
         }
 
         Search();
@@ -212,11 +216,16 @@ public class EnemyMine : MonoBehaviour
         Vector3 target = player.position + Vector3.up * 0.9f;
 
         Vector3 dirPlayer = (target - origin);
-        float distance = dirPlayer.magnitude;
+        float dis = dirPlayer.magnitude;
         dirPlayer.Normalize();
 
-        if (distance > viewDistance)
+        if (dis > viewDis)
             return false;
+        if (dis < explodeDis)
+        {
+            Explode();
+            return false;
+        }
 
         dirPlayer.Normalize();
 
@@ -225,7 +234,7 @@ public class EnemyMine : MonoBehaviour
         if (angle > viewAngle * 0.5f)
             return false;
 
-        if (Physics.Raycast(origin, dirPlayer, out RaycastHit hit, viewDistance, obstacleMask | playerMask))
+        if (Physics.Raycast(origin, dirPlayer, out RaycastHit hit, viewDis, obstacleMask | playerMask))
         {
             if (hit.transform == player)
                 return true;
@@ -236,27 +245,53 @@ public class EnemyMine : MonoBehaviour
 
     bool CanHearPlayer()
     {
-        float dist = Vector3.Distance(transform.position, player.position);
+        float dis = Vector3.Distance(transform.position, player.position);
 
         PCMovement pc = player.GetComponent<PCMovement>();
 
         if (pc.IsCrouching)
             return false;
 
-        return dist < hearingDistance;
+        return dis < hearDis;
     }
+
+    void Explode()
+    {
+        Debug.Log("You are dead.");
+        // Implement death screen
+    }
+
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, viewDistance);
+        Gizmos.DrawWireSphere(transform.position, viewDis);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explodeDis);
 
         Vector3 left = Quaternion.Euler(0, -viewAngle * 0.5f, 0) * transform.forward;
         Vector3 right = Quaternion.Euler(0, viewAngle * 0.5f, 0) * transform.forward;
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, left * viewDistance);
-        Gizmos.DrawRay(transform.position, right * viewDistance);
-        Gizmos.DrawRay(transform.position, transform.forward * viewDistance);
+        Gizmos.DrawRay(transform.position, left * viewDis);
+        Gizmos.DrawRay(transform.position, right * viewDis);
+        Gizmos.DrawRay(transform.position, transform.forward * viewDis);
+    }
+
+    void TestInput()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Vector2Int playerGrid = WorldToGrid(player.position);
+
+            //Debug.Log("Player Grid: " + playerGrid);
+
+            if (playerGrid != lastPlayerGrid)
+            {
+                BeginPath(playerGrid);
+                lastPlayerGrid = playerGrid;
+            }
+        }
     }
 }

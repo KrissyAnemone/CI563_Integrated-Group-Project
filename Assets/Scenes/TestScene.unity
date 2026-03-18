@@ -436,10 +436,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2078227247}
-    - target: {fileID: 7932678031444977043, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
-      propertyPath: viewAngle
-      value: 180
-      objectReference: {fileID: 0}
     - target: {fileID: 9097113119117216502, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_Name
       value: MineHome

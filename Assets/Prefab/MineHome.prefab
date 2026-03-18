@@ -154,15 +154,16 @@ MonoBehaviour:
   currentState: 0
   moveSpeed: 3
   waitTarget: 3
-  hearingDistance: 6
+  hearDis: 6
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
   playerMask:
     serializedVersion: 2
     m_Bits: 8
-  viewDistance: 20
-  viewAngle: 90
+  viewDis: 12
+  explodeDis: 5
+  viewAngle: 180
   player: {fileID: 0}
 --- !u!1 &9097113119117216502
 GameObject:
