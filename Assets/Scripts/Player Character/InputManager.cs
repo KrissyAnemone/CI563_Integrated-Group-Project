@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InputManager : MonoBehaviour
+{
+    public static InputManager Instance { get; private set; }
+
+    // You can change keybindings through these variables
+    public KeyCode forward = KeyCode.W;
+    public KeyCode backward = KeyCode.S;
+    public KeyCode left = KeyCode.A;
+    public KeyCode right = KeyCode.D;
+
+    public KeyCode crouch = KeyCode.LeftControl;
+
+    public KeyCode scanner = KeyCode.Tab;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(this);
+    }
+
+    // Movement
+    public bool IsMovingUp() => Input.GetKey(forward);
+    public bool IsMovingDown() => Input.GetKey(backward);
+    public bool IsMovingLeft() => Input.GetKey(left);
+    public bool IsMovingRight() => Input.GetKey(right);
+
+    // Crouch
+    public bool IsCrouching() => Input.GetKey(crouch);
+
+    // UI controls
+    public bool IsScannerDown() => Input.GetKeyDown(scanner);
+    public bool IsScannerUp() => Input.GetKeyUp(scanner);
+}
