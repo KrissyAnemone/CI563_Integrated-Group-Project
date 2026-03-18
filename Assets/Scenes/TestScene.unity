@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &446340810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2122787626719453984, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
+  m_PrefabInstance: {fileID: 763954644322761003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &534432045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
@@ -801,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MineHome
       objectReference: {fileID: 0}
+    - target: {fileID: 9097113119117216502, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -881,6 +890,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496567154}
   m_CullTransparentMesh: 1
+--- !u!1 &1745494069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5900128917555189645, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
+  m_PrefabInstance: {fileID: 1473009154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782707195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,9 +1112,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 28408803302405200, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      propertyPath: pc
+      value: 
+      objectReference: {fileID: 446340810}
+    - target: {fileID: 28408803302405200, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1745494069}
+    - target: {fileID: 28408803302405200, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
       propertyPath: mapObj
       value: 
       objectReference: {fileID: 1496567154}
+    - target: {fileID: 28408803302405200, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      propertyPath: sonarPrefab
+      value: 
+      objectReference: {fileID: 340226921800332635, guid: 720e7641abc88554b8944984ba593cf2, type: 3}
     - target: {fileID: 214084392948369259, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1143,6 +1169,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 522808346821793198, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867403286135958789, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

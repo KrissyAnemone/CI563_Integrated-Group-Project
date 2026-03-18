@@ -4,11 +4,14 @@ using UnityEngine.UI;
 
 public class ScannerController : MonoBehaviour
 {
-    public Grid grid = new Grid();
+    public Grid grid;
     [SerializeField] GameObject mapObj;
+    [SerializeField] GameObject sonarPrefab;
+    [SerializeField] GameObject pc;
+    [SerializeField] GameObject enemy;
     public int[,] mapToLoad =
     {
-        { 0,0,0,0,0,0,0,0,0,0 },
+        { 1,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0 },
         { 0,0,0,0,0,0,0,0,0,0 },
@@ -17,13 +20,35 @@ public class ScannerController : MonoBehaviour
         { 0,0,0,0,0,0,0,0,0,0 },
         { 1,1,1,0,0,0,0,0,0,0 },
         { 1,0,1,0,0,0,0,0,0,0 },
-        { 1,1,1,0,0,0,0,0,0,0 }
+        { 1,1,1,0,0,0,0,0,0,1 }
     };
     // Start is called before the first frame update
     void Start()
     {
+        SonarMine sonarPS = sonarPrefab.GetComponent<SonarMine>();
+        sonarPS.pc = pc;
+        sonarPS.enemy = enemy;
+
+        grid = new Grid(this);
         grid.CreateSpaces(mapToLoad);
         CreateMineText();
+    }
+
+    public GameObject CreateObject(occupier occ, float x, float z) // Create objects for grid
+    {
+        if (occ == occupier.Mine)
+        {
+            if (sonarPrefab)
+            {
+                GameObject sonar = Instantiate(sonarPrefab);
+                sonar.transform.position = new Vector3(x-90,2,z+90); // The offset is originally -100 because thats half the side of the whole grid. 
+                                                                     // It becomes 90 when converting from the bottom left of each space to the middle (each space is 20 wide, so its +10).
+                                                                     // It is the opposite sign for z axis because the grid is stored from top to bottom, I believe. This was partially rectified by changing the real world pos to -z*width in the Space constructor.
+                                                                     // But most importantly it just works
+                return sonar;
+            }
+        }
+        return null;
     }
 
     void CreateMineText()

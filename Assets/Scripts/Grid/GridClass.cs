@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum occupier { Mine, Empty }
+public enum occupier { Mine, Empty, Blocked }
 public class Grid
 {
     int layer = -1; // Default layer - change upon loading if implementing layers
@@ -8,8 +8,17 @@ public class Grid
     public int layerWidth = -1;
     public int layerHeight = -1;
 
+    ScannerController scannerScript;
+
     public Space GetSpace(int x, int z) { return spaces[x, z]; }
     Space[,] spaces = null;
+
+    public Grid() { }
+    public Grid(ScannerController scannerController)
+    {
+        scannerScript = scannerController;
+    }
+
 
     public void CreateSpaces(int[,] loadingGrid)
     {
@@ -31,7 +40,7 @@ public class Grid
                 tempSpaces[column, row].containType = occ;
 
                 // Create Space Object
-                tempSpaces[column, row].obj = CreateObject(occ, column*spaceWidth, row*spaceWidth);
+                tempSpaces[column, row].obj = CreateObject(occ, tempSpaces[column,row].GetWorldPos().x, tempSpaces[column, row].GetWorldPos().y);
             }
         }
         spaces = tempSpaces;
@@ -46,20 +55,17 @@ public class Grid
                 return occupier.Empty;
             case 1:
                 return occupier.Mine;
+            case 2:
+                return occupier.Blocked;
             default:
                 return occupier.Empty;
         }
     }
 
-    public GameObject CreateObject(occupier occ, float x, float z) // WIP
+    public GameObject CreateObject(occupier occ, float x, float z)
     {
-        if (occ == occupier.Mine)
-        {
-            // Instantiate Mine
-            // Set Mine position
-            // return mine object
-        }
-        return null;
+        if (!scannerScript) return null;
+        return scannerScript.CreateObject(occ, x, z); // Must do this because this isn't derived from monobehaviour
     }
 
     public int CheckSurroundingMines(int col, int row)
@@ -100,7 +106,7 @@ public class Space
 
     public Space(int x, int z, float width) // Constructor
     {
-        worldPos = new Vector2(x*width, z*width);
+        worldPos = new Vector2(x*width, -z*width);
         rowCol = new Vector2(x, z);
     }
     
