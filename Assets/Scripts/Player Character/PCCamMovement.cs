@@ -25,6 +25,18 @@ public class PCCamMovement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
+        // Free Mouse when Scanner Down
+        if (InputManager.Instance.IsScannerDown())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        if (InputManager.Instance.IsScannerUp())
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
         // Calculate mouse pos
         yRotation += mouseX;
         xRotation -= mouseY;

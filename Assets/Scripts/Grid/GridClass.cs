@@ -61,6 +61,26 @@ public class Grid
         }
         return null;
     }
+
+    public int CheckSurroundingMines(int col, int row)
+    {
+        int mines = 0;
+        for (int dx = -1; dx <= 1; dx++)
+        {
+            if (col + dx < 0 || col + dx >= layerWidth) continue; // In width bounds
+            for (int dy = -1; dy <= 1; dy++)
+            {
+                if (row + dy < 0 || row + dy >= layerHeight) continue; // In height bounds
+                if (dx == 0 && dy == 0) continue; // Not original space
+
+                Space space = GetSpace(col + dx, row + dy);
+                if (space.containType == occupier.Mine) mines++; // Increase number of surrounding mines
+            }
+        }
+        return mines;
+    }
+
+
 }
 
 public class Space
@@ -74,10 +94,15 @@ public class Space
     
     public Vector2 GetRowCol() { return rowCol; }
     Vector2 rowCol = new(-1, -1);
-    
+
+    public int mineNum = 0;
+    public GameObject text = null;
+
     public Space(int x, int z, float width) // Constructor
     {
         worldPos = new Vector2(x*width, z*width);
         rowCol = new Vector2(x, z);
     }
+    
+
 }

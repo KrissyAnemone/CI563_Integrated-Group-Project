@@ -1,0 +1,93 @@
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScannerController : MonoBehaviour
+{
+    public Grid grid = new Grid();
+    [SerializeField] GameObject mapObj;
+    public int[,] mapToLoad =
+    {
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,1,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0 },
+        { 1,1,1,0,0,0,0,0,0,0 },
+        { 1,0,1,0,0,0,0,0,0,0 },
+        { 1,1,1,0,0,0,0,0,0,0 }
+    };
+    // Start is called before the first frame update
+    void Start()
+    {
+        grid.CreateSpaces(mapToLoad);
+        CreateMineText();
+    }
+
+    void CreateMineText()
+    {
+        // ------------------------- Create base object and add required components -------------------------
+
+        GameObject obj = new GameObject();
+
+        obj.AddComponent<CanvasRenderer>();
+
+        RectTransform tf = obj.AddComponent<RectTransform>();
+        TextMeshProUGUI txt = obj.AddComponent<TextMeshProUGUI>();
+
+        // Set transform properties
+        tf.sizeDelta = new(60, 60);
+        tf.localPosition = new(-1111,-1111,0); // Move far out of way
+        tf.anchorMax = new(0, 1);
+        tf.anchorMin = new(0,1);
+
+        // Set default text properties
+        txt.text = "";
+        txt.alignment = TextAlignmentOptions.Center;
+
+
+        // ------------------------- Instantiate text objects at each space in the grid -------------------------
+
+        float xStart = 29.5f, yStart = -29.5f;  // RowCol(0,0) = Position(29.5, -29.5)
+        float dif = 62.5f; // Distance between spaces = 62.5
+
+        for (int row = 0; row < grid.layerHeight; row++)
+        {
+            for (int column = 0; column < grid.layerWidth; column++)
+            {
+                Space space = grid.GetSpace(column, row);
+                space.text = Instantiate(obj); // Instantiate Text object
+
+                // Set transform properties
+                RectTransform instance_tf = space.text.GetComponent<RectTransform>();
+                instance_tf.SetParent(mapObj.transform);
+                instance_tf.localScale = new(1, 1, 1);
+
+                // For some reason its not setting the correct local position, its offset by 312.5, so I just move it back by that much...
+                float xPos = xStart + (dif * column) - 312.5f;
+                float yPos = yStart - (dif * row) + 312.5f;
+                instance_tf.localPosition = new(xPos, yPos, 0);
+
+                Button btn = space.text.gameObject.AddComponent<Button>();
+
+                void funct() { SpaceClickEvent(space); } // Local function for this specific space
+                btn.onClick.AddListener(funct); // Add function to click event
+            }
+        }
+    }
+
+    private void SpaceClickEvent(Space space)
+    {
+        GameObject textObj = space.text.gameObject;
+        TextMeshProUGUI text = textObj.GetComponent<TextMeshProUGUI>();
+        if (text.text != "") return;
+
+        Debug.Log(space.GetRowCol());
+
+        int num = grid.CheckSurroundingMines((int)space.GetRowCol().x, (int)space.GetRowCol().y); 
+        text.text = num.ToString(); // Store number in space - possible use for saving
+        space.mineNum = num;
+    }
+}
