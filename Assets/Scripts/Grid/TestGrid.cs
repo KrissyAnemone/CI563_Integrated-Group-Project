@@ -39,4 +39,29 @@ public class TestGrid : MonoBehaviour
     {
         
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (grid == null)
+            grid = new Grid();
+
+        for (int row = 0; row < grid.layerHeight; row++)
+        {
+            for (int column = 0; column < grid.layerWidth; column++)
+            {
+                Space s = grid.GetSpace(column, row);
+                Vector2 pos = s.GetWorldPos();
+
+                if (s.containType == occupier.Mine)
+                    Gizmos.color = Color.red;
+                else
+                    Gizmos.color = Color.cyan;
+
+                Gizmos.DrawWireCube(
+                    new Vector3(pos.x + grid.spaceWidth / 2, 0, pos.y + grid.spaceWidth / 2),
+                    new Vector3(grid.spaceWidth, 0, grid.spaceWidth)
+                );
+            }
+        }
+    }
 }
