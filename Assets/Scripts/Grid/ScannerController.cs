@@ -34,6 +34,33 @@ public class ScannerController : MonoBehaviour
         CreateMineText();
     }
 
+
+    private void OnDrawGizmosSelected()
+    {
+        if (grid == null)
+            grid = new Grid();
+
+        for (int row = 0; row < grid.layerHeight; row++)
+        {
+            for (int column = 0; column < grid.layerWidth; column++)
+            {
+                Space s = grid.GetSpace(column, row);
+                Vector2 pos = s.GetWorldPos();
+                pos = new(pos.x-((grid.layerWidth*grid.spaceWidth)/2), pos.y+(grid.layerHeight*grid.spaceWidth)/2 - grid.spaceWidth);
+
+                if (s.containType == occupier.Mine)
+                    Gizmos.color = Color.red;
+                else
+                    Gizmos.color = Color.cyan;
+
+                Gizmos.DrawWireCube(
+                    new Vector3(pos.x + grid.spaceWidth / 2, 0, pos.y + grid.spaceWidth / 2),
+                    new Vector3(grid.spaceWidth, 0, grid.spaceWidth)
+                );
+            }
+        }
+    }
+
     public GameObject CreateObject(occupier occ, float x, float z) // Create objects for grid
     {
         if (occ == occupier.Mine)
@@ -41,10 +68,13 @@ public class ScannerController : MonoBehaviour
             if (sonarPrefab)
             {
                 GameObject sonar = Instantiate(sonarPrefab);
-                sonar.transform.position = new Vector3(x-90,2,z+90); // The offset is originally -100 because thats half the side of the whole grid. 
-                                                                     // It becomes 90 when converting from the bottom left of each space to the middle (each space is 20 wide, so its +10).
-                                                                     // It is the opposite sign for z axis because the grid is stored from top to bottom, I believe. This was partially rectified by changing the real world pos to -z*width in the Space constructor.
-                                                                     // But most importantly it just works
+                //sonar.transform.position = new Vector3(x-90,2,z+90); // The offset is originally -100 because thats half the side of the whole grid. 
+                                                                       // It becomes 90 when converting from the bottom left of each space to the middle (each space is 20 wide, so its +10).
+                                                                       // It is the opposite sign for z axis because the grid is stored from top to bottom, I believe. This was partially rectified by changing the real world pos to -z*width in the Space constructor.
+
+                float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth)/2;
+                float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth)/2;
+                sonar.transform.position = new Vector3(x-xOffset, 2, z+zOffset);
                 return sonar;
             }
         }

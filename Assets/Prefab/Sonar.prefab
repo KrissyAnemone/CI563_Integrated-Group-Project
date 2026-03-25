@@ -98,4 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pc: {fileID: 0}
   enemy: {fileID: 0}
-  range: 20
+  enemyScript: {fileID: 0}
+  range: 10
+  active: 1

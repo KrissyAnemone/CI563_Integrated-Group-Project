@@ -6,8 +6,10 @@ public class SonarMine : MonoBehaviour
 {
     public GameObject pc;
     public GameObject enemy;
-    EnemyMine enemyScript;
+
+    public EnemyMine enemyScript;
     public float range = 20;
+    public bool active = true;
 
     private void Start()
     {
@@ -17,16 +19,19 @@ public class SonarMine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!active) return;
         if (CheckPcInRange())
         {
-            // Enemy.CallAttractFunction();
+            active = false;
+            enemyScript.SonarTriggered(transform);
+            Debug.Log("Triggered Sonar");
         }
     }
 
     bool CheckPcInRange()
     {
         float distanceToPc = Vector3.Distance(pc.transform.position, transform.position);
-        if (distanceToPc >= range) return true;
+        if (distanceToPc <= range) return true;
         return false;
     }
 }

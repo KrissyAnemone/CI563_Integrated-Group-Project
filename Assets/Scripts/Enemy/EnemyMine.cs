@@ -16,6 +16,7 @@ public class EnemyMine : MonoBehaviour
     [Header("Enemy Stats")]
     public Transform enemyHome;
     public MineState currentState = MineState.Idle;
+    public MineState lastState = MineState.Idle;
     public float moveSpeed = 3f;
     public float waitTarget = 3f;
     public float hearDis = 6f;
@@ -47,15 +48,15 @@ public class EnemyMine : MonoBehaviour
 
     void Start()
     {
-        var testGrid = FindObjectOfType<TestGrid>();
-        if (testGrid != null)
+        var scanner = FindObjectOfType<ScannerController>();
+        if (scanner != null)
         {
-            grid = testGrid.grid;
+            grid = scanner.grid;
             pathfinder = new EnemyPathfinding(grid);
             UpdateGridPos();
         }
         else
-            Debug.LogError("TestGrid not found!");
+            Debug.LogError("Scanner not found!");
     }
 
     void Update()
@@ -86,10 +87,12 @@ public class EnemyMine : MonoBehaviour
 
             case MineState.ReturnHome:
                 ReturnHome();
+                lastState = MineState.ReturnHome;
                 break;
 
             case MineState.Chase:
                 ChasePC();
+                lastState = MineState.Chase;
                 break;
         }
     }
@@ -106,14 +109,17 @@ public class EnemyMine : MonoBehaviour
 
         if (pathIndex >= currentPath.Count)
         {
-            StartCoroutine(WaitThenReturn());
+            if (lastState != MineState.ReturnHome) StartCoroutine(WaitThenReturn());
             currentPath = null;
+            lastState = MineState.Search;
             return;
         }
 
         Vector2Int nextTile = currentPath[pathIndex];
 
         Vector3 targetWorld = GridToWorld(nextTile);
+        targetWorld.x += grid.spaceWidth / 2;
+        targetWorld.z -= grid.spaceWidth / 2;
 
         Vector3 moveDir = (targetWorld - transform.position);
 
@@ -146,6 +152,11 @@ public class EnemyMine : MonoBehaviour
             //Debug.Log("PATH FOUND length: " + currentPath.Count);
             pathIndex = 0;
             currentState = MineState.Search;
+            Debug.Log("GO SEARCH");
+        }
+        else
+        {
+            Debug.Log("NULLL");
         }
     }
 
@@ -156,18 +167,34 @@ public class EnemyMine : MonoBehaviour
 
     Vector2Int WorldToGrid(Vector3 world)
     {
-        int x = Mathf.RoundToInt(world.x / grid.spaceWidth);
+        /*int x = Mathf.RoundToInt(world.x / grid.spaceWidth);
         int z = Mathf.RoundToInt(world.z / grid.spaceWidth);
 
         x = Mathf.Clamp(x, 0, grid.layerWidth - 1);
         z = Mathf.Clamp(z, 0, grid.layerHeight - 1);
 
-        return new Vector2Int(x, z);
+        return new Vector2Int(x, z);*/
+        float xPos = world.x + (grid.layerWidth*grid.spaceWidth)/2;
+        float zPos = world.z - (grid.layerHeight * grid.spaceWidth)/2;
+
+        int col = (int)(xPos / grid.spaceWidth);
+        int row = -(int)(zPos / grid.spaceWidth);
+
+        return new Vector2Int(col, row);
     }
 
     Vector3 GridToWorld(Vector2Int gridPos)
     {
-        return new Vector3(gridPos.x * grid.spaceWidth, transform.position.y, gridPos.y * grid.spaceWidth);
+        //return new Vector3(gridPos.x * grid.spaceWidth, transform.position.y, gridPos.y * grid.spaceWidth);
+
+        float xPos = gridPos.x * grid.spaceWidth;
+        float zPos = gridPos.y * -grid.spaceWidth;
+
+        float worldX = xPos - (grid.layerWidth * grid.spaceWidth) / 2;
+        float worldZ = zPos + (grid.layerHeight * grid.spaceWidth) / 2;
+
+        return new Vector3(worldX, 1.125f, worldZ);
+
     }
 
     void ReturnHome()
@@ -284,14 +311,22 @@ public class EnemyMine : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             Vector2Int playerGrid = WorldToGrid(player.position);
+            Vector2Int homeGrid = WorldToGrid(enemyHome.position);
 
-            //Debug.Log("Player Grid: " + playerGrid);
+            Debug.Log("Player Grid: " + playerGrid);
 
-            if (playerGrid != lastPlayerGrid)
+            //if (playerGrid != lastPlayerGrid)
             {
                 BeginPath(playerGrid);
                 lastPlayerGrid = playerGrid;
             }
         }
+    }
+
+    public void SonarTriggered(Transform tf)
+    {
+        Vector2Int gridPos = WorldToGrid(tf.position);
+        Debug.Log("Sonar Grid: " + gridPos);
+        BeginPath(gridPos);
     }
 }

@@ -98,8 +98,8 @@ public class Space
     public Vector2 GetWorldPos() { return worldPos; }
     Vector2 worldPos = new(-1, -1); // Default worldPos (x, z) - set upon being loaded
     
-    public Vector2 GetRowCol() { return rowCol; }
-    Vector2 rowCol = new(-1, -1);
+    public Vector2Int GetRowCol() { return rowCol; }
+    Vector2Int rowCol = new(-1, -1);
 
     public int mineNum = 0;
     public GameObject text = null;
@@ -107,7 +107,7 @@ public class Space
     public Space(int x, int z, float width) // Constructor
     {
         worldPos = new Vector2(x*width, -z*width);
-        rowCol = new Vector2(x, z);
+        rowCol = new Vector2Int(x, z);
     }
     
 
