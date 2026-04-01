@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3949686294603517763}
-  - component: {fileID: 7932678031444977043}
+  - component: {fileID: 5101776627197258293}
   m_Layer: 0
   m_Name: ParentMine
   m_TagString: Untagged
@@ -138,7 +138,7 @@ Transform:
   - {fileID: 4586176386040564549}
   m_Father: {fileID: 5755419077574837080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7932678031444977043
+--- !u!114 &5101776627197258293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,17 +152,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHome: {fileID: 5755419077574837080}
   currentState: 0
+  lastState: 0
   moveSpeed: 3
   waitTarget: 3
-  hearDis: 6
+  hearDis: 10
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
   playerMask:
     serializedVersion: 2
     m_Bits: 8
-  viewDis: 12
-  explodeDis: 5
+  viewDis: 20
+  explodeDis: 10
   viewAngle: 180
   player: {fileID: 0}
 --- !u!1 &9097113119117216502

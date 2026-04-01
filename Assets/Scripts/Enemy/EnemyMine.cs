@@ -48,15 +48,28 @@ public class EnemyMine : MonoBehaviour
 
     void Start()
     {
-        var scanner = FindObjectOfType<ScannerController>();
+        // Grid now passed from Scanner when finished creating Grid
+        /*ScannerController scanner = FindObjectOfType<ScannerController>();
         if (scanner != null)
         {
-            grid = scanner.grid;
-            pathfinder = new EnemyPathfinding(grid);
-            UpdateGridPos();
+            if (scanner.grid != null)
+            {
+                grid = scanner.grid;
+                pathfinder = new EnemyPathfinding(grid);
+                UpdateGridPos();
+            }
         }
         else
+        {
             Debug.LogError("Scanner not found!");
+        }*/
+
+    }
+
+    public void PassGrid(Grid g)
+    {
+        grid = g;
+        pathfinder = new EnemyPathfinding(grid);
     }
 
     void Update()
@@ -182,7 +195,6 @@ public class EnemyMine : MonoBehaviour
 
         return new Vector2Int(col, row);
     }
-
     Vector3 GridToWorld(Vector2Int gridPos)
     {
         //return new Vector3(gridPos.x * grid.spaceWidth, transform.position.y, gridPos.y * grid.spaceWidth);

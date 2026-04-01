@@ -32,6 +32,9 @@ public class ScannerController : MonoBehaviour
         grid = new Grid(this);
         grid.CreateSpaces(mapToLoad);
         CreateMineText();
+
+        FindObjectOfType<EnemyMine>().PassGrid(grid);
+
     }
 
 

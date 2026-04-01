@@ -11,6 +11,8 @@ public class PCCamMovement : MonoBehaviour
     private float xRotation = 0f;
     private float yRotation = 0f;
 
+    private bool scannerDown = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,22 +32,27 @@ public class PCCamMovement : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            scannerDown = true;
         }
         if (InputManager.Instance.IsScannerUp())
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            scannerDown = false;
         }
 
-        // Calculate mouse pos
-        yRotation += mouseX;
-        xRotation -= mouseY;
+        if (!scannerDown) // Locks mouse when scanner is open
+        {
+            // Calculate mouse pos
+            yRotation += mouseX;
+            xRotation -= mouseY;
 
-        // Clamping cam
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            // Clamping cam
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // Rotate cam
-        cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        ori.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            // Rotate cam
+            cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            ori.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        }
     }
 }
