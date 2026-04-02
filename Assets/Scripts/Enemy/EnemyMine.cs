@@ -160,14 +160,14 @@ public class EnemyMine : MonoBehaviour
 
         currentPath = pathfinder.FindPath(currentGridPos, targetGridPos);
 
-        if (currentPath != null)
+        //if (currentPath != null)
         {
             //Debug.Log("PATH FOUND length: " + currentPath.Count);
             pathIndex = 0;
             currentState = MineState.Search;
             Debug.Log("GO SEARCH");
         }
-        else
+        //else
         {
             Debug.Log("NULLL");
         }

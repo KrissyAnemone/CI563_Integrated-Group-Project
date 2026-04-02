@@ -7,20 +7,21 @@ public class ScannerController : MonoBehaviour
     public Grid grid;
     [SerializeField] GameObject mapObj;
     [SerializeField] GameObject sonarPrefab;
+    [SerializeField] GameObject testObstaclePrefab;
     [SerializeField] GameObject pc;
     [SerializeField] GameObject enemy;
     public int[,] mapToLoad =
     {
-        { 1,0,0,0,0,0,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0 },
-        { 0,0,0,0,0,1,0,0,0,0 },
-        { 0,0,0,0,0,0,0,0,0,0 },
-        { 1,1,1,0,0,0,0,0,0,0 },
-        { 1,0,1,0,0,0,0,0,0,0 },
-        { 1,1,1,0,0,0,0,0,0,1 }
+        { 1,2,2,2,2,2,2,2,2,2 },
+        { 0,0,0,0,2,0,2,0,0,2 },
+        { 0,0,0,0,2,0,2,0,0,2 },
+        { 2,2,2,0,2,0,2,2,0,2 },
+        { 0,0,2,0,2,0,0,2,0,2 },
+        { 0,0,0,0,0,1,0,0,0,2 },
+        { 0,0,2,0,2,0,2,0,0,2 },
+        { 1,1,1,0,2,0,2,0,0,2 },
+        { 1,0,1,0,2,0,2,0,0,2 },
+        { 1,1,1,0,2,0,2,0,0,1 }
     };
     // Start is called before the first frame update
     void Start()
@@ -72,14 +73,23 @@ public class ScannerController : MonoBehaviour
             {
                 GameObject sonar = Instantiate(sonarPrefab);
                 //sonar.transform.position = new Vector3(x-90,2,z+90); // The offset is originally -100 because thats half the side of the whole grid. 
-                                                                       // It becomes 90 when converting from the bottom left of each space to the middle (each space is 20 wide, so its +10).
-                                                                       // It is the opposite sign for z axis because the grid is stored from top to bottom, I believe. This was partially rectified by changing the real world pos to -z*width in the Space constructor.
+                // It becomes 90 when converting from the bottom left of each space to the middle (each space is 20 wide, so its +10).
+                // It is the opposite sign for z axis because the grid is stored from top to bottom, I believe. This was partially rectified by changing the real world pos to -z*width in the Space constructor.
 
-                float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth)/2;
-                float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth)/2;
-                sonar.transform.position = new Vector3(x-xOffset, 2, z+zOffset);
+                float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth) / 2;
+                float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth) / 2;
+                sonar.transform.position = new Vector3(x - xOffset, 2, z + zOffset);
                 return sonar;
             }
+        }
+        else if (occ == occupier.Blocked)
+        {
+            GameObject obj = Instantiate(testObstaclePrefab);
+
+            float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth) / 2;
+            float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth) / 2;
+            obj.transform.position = new Vector3(x - xOffset, 2, z + zOffset);
+
         }
         return null;
     }

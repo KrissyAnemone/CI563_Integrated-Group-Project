@@ -60,6 +60,9 @@ public class EnemyPathfinding
                 if (!IsInsideGrid(adj))
                     continue;
 
+                if (IsObstacle(adj))
+                    continue;
+
                 int newCost = currentNode.gCost + 1;
 
                 Node existing = openList.Find(n => n.pos == adj);
@@ -87,6 +90,13 @@ public class EnemyPathfinding
     private bool IsInsideGrid(Vector2Int pos)
     {
         return pos.x >= 0 && pos.y >= 0 && pos.x < grid.layerWidth && pos.y < grid.layerHeight;
+    }
+
+    private bool IsObstacle(Vector2Int pos)
+    {
+        Space space = grid.GetSpace(pos.x, pos.y);
+        if (space.containType == occupier.Blocked) return true;
+        return false;
     }
 
     private List<Vector2Int> ReconstructPath(Node end)
