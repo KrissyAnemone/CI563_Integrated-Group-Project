@@ -8,6 +8,8 @@ public class PCCamMovement : MonoBehaviour
     public Transform ori;
     public float mouseSensitivity = 50f;
 
+    public bool isDead = false;
+
     private float xRotation = 0f;
     private float yRotation = 0f;
 
@@ -16,43 +18,66 @@ public class PCCamMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        ToggleCursor();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        if (!isDead)
+        {
+            if (Cursor.lockState == CursorLockMode.None)
+                ToggleCursor();
 
-        // Free Mouse when Scanner Down
-        if (InputManager.Instance.IsScannerDown())
+            // Input
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+            // Free Mouse when Scanner Down
+            if (InputManager.Instance.IsScannerDown())
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                scannerDown = true;
+            }
+            if (InputManager.Instance.IsScannerUp())
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                scannerDown = false;
+            }
+
+            if (!scannerDown) // Locks mouse when scanner is open
+            {
+                // Calculate mouse pos
+                yRotation += mouseX;
+                xRotation -= mouseY;
+
+                // Clamping cam
+                xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+                // Rotate cam
+                cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+                ori.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            }
+        }
+        else if (isDead && Cursor.lockState == CursorLockMode.Locked)
+        {
+            ToggleCursor();
+        }
+    }
+
+    void ToggleCursor()
+    {
+        if (Cursor.lockState == CursorLockMode.Locked)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            scannerDown = true;
         }
-        if (InputManager.Instance.IsScannerUp())
+        else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            scannerDown = false;
-        }
-
-        if (!scannerDown) // Locks mouse when scanner is open
-        {
-            // Calculate mouse pos
-            yRotation += mouseX;
-            xRotation -= mouseY;
-
-            // Clamping cam
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-            // Rotate cam
-            cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            ori.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         }
     }
 }

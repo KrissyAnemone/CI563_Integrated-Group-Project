@@ -29,8 +29,11 @@ public class EnemyMine : MonoBehaviour
     public float viewAngle = 180f;
 
     [Header("Other Object")]
-    public Transform player;
+    public GameObject player;
+    public ScreenOver screenOver;
     public Grid grid;
+
+    private float storeSpeed;
 
     // Pathfinding
     private EnemyPathfinding pathfinder;
@@ -64,6 +67,7 @@ public class EnemyMine : MonoBehaviour
             Debug.LogError("Scanner not found!");
         }*/
 
+        storeSpeed = moveSpeed;
     }
 
     public void PassGrid(Grid g)
@@ -84,7 +88,7 @@ public class EnemyMine : MonoBehaviour
         }
         else if (CanHearPlayer())
         {
-            Vector2Int noiseGrid = WorldToGrid(player.position);
+            Vector2Int noiseGrid = WorldToGrid(player.transform.position);
             BeginPath(noiseGrid);
         }
 
@@ -234,7 +238,7 @@ public class EnemyMine : MonoBehaviour
 
         if (chaseTimer <= 0f)
         {
-            Vector2Int playerGrid = WorldToGrid(player.position);
+            Vector2Int playerGrid = WorldToGrid(player.transform.position);
 
             if (playerGrid != lastPlayerGrid)
             {
@@ -252,7 +256,7 @@ public class EnemyMine : MonoBehaviour
     bool CanSeePlayer()
     {
         Vector3 origin = transform.position + Vector3.down * 0.5f;
-        Vector3 target = player.position + Vector3.up * 0.9f;
+        Vector3 target = player.transform.position + Vector3.up * 0.9f;
 
         Vector3 dirPlayer = (target - origin);
         float dis = dirPlayer.magnitude;
@@ -265,6 +269,8 @@ public class EnemyMine : MonoBehaviour
             Explode();
             return false;
         }
+        else
+            moveSpeed = storeSpeed;
 
         dirPlayer.Normalize();
 
@@ -284,7 +290,7 @@ public class EnemyMine : MonoBehaviour
 
     bool CanHearPlayer()
     {
-        float dis = Vector3.Distance(transform.position, player.position);
+        float dis = Vector3.Distance(transform.position, player.transform.position);
 
         PCMovement pc = player.GetComponent<PCMovement>();
 
@@ -296,8 +302,16 @@ public class EnemyMine : MonoBehaviour
 
     void Explode()
     {
-        Debug.Log("You are dead.");
         // Implement death screen
+        PCCamMovement playerCam = player.GetComponent<PCCamMovement>();
+        PCMovement playerMovement = player.GetComponent<PCMovement>();
+
+        playerCam.isDead = true;
+        playerMovement.isDead = true;
+
+        moveSpeed = 0f;
+
+        screenOver.gameObject.SetActive(true);
     }
 
 
@@ -322,7 +336,7 @@ public class EnemyMine : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            Vector2Int playerGrid = WorldToGrid(player.position);
+            Vector2Int playerGrid = WorldToGrid(player.transform.position);
             Vector2Int homeGrid = WorldToGrid(enemyHome.position);
 
             Debug.Log("Player Grid: " + playerGrid);

@@ -12,6 +12,9 @@ public class PCMovement : MonoBehaviour
 
     public bool IsCrouching { get; private set; }
 
+    public float deadSpeed = 0;
+    public bool isDead = false;
+
     private Rigidbody rb;
     private CapsuleCollider col;
     private float storeSpeed;
@@ -35,39 +38,46 @@ public class PCMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Handle crouch
-        HandleCrouch();
+        if (!isDead)
+        {
+            moveSpeed = storeSpeed;
 
-        // Direction variables
-        Vector3 moveDirection = Vector3.zero;
-        Vector3 forward = orientation.forward;
-        Vector3 right = orientation.right;
+            // Handle crouch
+            HandleCrouch();
 
-        forward.y = 0f;
-        right.y = 0f;
+            // Direction variables
+            Vector3 moveDirection = Vector3.zero;
+            Vector3 forward = orientation.forward;
+            Vector3 right = orientation.right;
 
-        forward.Normalize();
-        right.Normalize();
+            forward.y = 0f;
+            right.y = 0f;
 
-        // Input
-        if (InputManager.Instance.IsMovingUp())
-            moveDirection += forward;
+            forward.Normalize();
+            right.Normalize();
 
-        if (InputManager.Instance.IsMovingDown())
-            moveDirection -= forward;
+            // Input
+            if (InputManager.Instance.IsMovingUp())
+                moveDirection += forward;
 
-        if (InputManager.Instance.IsMovingLeft())
-            moveDirection -= right;
+            if (InputManager.Instance.IsMovingDown())
+                moveDirection -= forward;
 
-        if (InputManager.Instance.IsMovingRight())
-            moveDirection += right;
+            if (InputManager.Instance.IsMovingLeft())
+                moveDirection -= right;
 
-        moveDirection.Normalize();
+            if (InputManager.Instance.IsMovingRight())
+                moveDirection += right;
 
-        Vector3 velocity = moveDirection * moveSpeed;
-        velocity.y = rb.velocity.y;
+            moveDirection.Normalize();
 
-        rb.velocity = velocity;
+            Vector3 velocity = moveDirection * moveSpeed;
+            velocity.y = rb.velocity.y;
+
+            rb.velocity = velocity;
+        }
+        else if (isDead)
+            moveSpeed = deadSpeed;
     }
 
     void HandleCrouch()
