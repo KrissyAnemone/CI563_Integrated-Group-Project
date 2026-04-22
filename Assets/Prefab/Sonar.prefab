@@ -99,5 +99,5 @@ MonoBehaviour:
   pc: {fileID: 0}
   enemy: {fileID: 0}
   enemyScript: {fileID: 0}
-  range: 10
+  range: 1.5
   active: 1
