@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 763954644322761004}
     - target: {fileID: 5755419077574837080, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 70.4
       objectReference: {fileID: 0}
     - target: {fileID: 5755419077574837080, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755419077574837080, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -36.4
+      value: 87.7
       objectReference: {fileID: 0}
     - target: {fileID: 5755419077574837080, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -39.5
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -427,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -70.2
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: sonarPrefab
       value: 
       objectReference: {fileID: 340226921800332635, guid: 720e7641abc88554b8944984ba593cf2, type: 3}
+    - target: {fileID: 28408803302405200, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
+      propertyPath: testObstaclePrefab
+      value: 
+      objectReference: {fileID: 340226921800332635, guid: eae56dad07eb01742a5ec82426287ad7, type: 3}
     - target: {fileID: 214084392948369259, guid: f20fd7e553288c74789883f6322b75b7, type: 3}
       propertyPath: m_Name
       value: GameManager
