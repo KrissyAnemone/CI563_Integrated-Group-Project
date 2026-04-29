@@ -12,6 +12,10 @@ public class PCMovement : MonoBehaviour
 
     public bool IsCrouching { get; private set; }
 
+    public LayerMask groundLayer;
+    public float jumpHeight = 2f;
+    public float groundCheckDistance = 0.1f;
+
     public float deadSpeed = 0;
     public bool isDead = false;
 
@@ -20,6 +24,7 @@ public class PCMovement : MonoBehaviour
     private float storeSpeed;
     private float standCenterY;
     private float crouchCenterY;
+    private bool isGrounded;
 
     void Start()
     {
@@ -38,9 +43,15 @@ public class PCMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, (col.height / 2f) + groundCheckDistance, groundLayer);
+
         if (!isDead)
         {
             moveSpeed = storeSpeed;
+
+            // Check for jump
+            if (InputManager.Instance.IsJumping() && isGrounded)
+                Jump();
 
             // Handle crouch
             HandleCrouch();
@@ -78,6 +89,12 @@ public class PCMovement : MonoBehaviour
         }
         else if (isDead)
             moveSpeed = deadSpeed;
+    }
+
+    void Jump()
+    {
+        float jumpVelocity = Mathf.Sqrt(2f * Mathf.Abs(Physics.gravity.y) * jumpHeight);
+        rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
     }
 
     void HandleCrouch()

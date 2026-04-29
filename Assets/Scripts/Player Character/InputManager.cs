@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
     public KeyCode left = KeyCode.A;
     public KeyCode right = KeyCode.D;
 
+    public KeyCode jump = KeyCode.Space;
+
     public KeyCode crouch = KeyCode.LeftControl;
 
     public KeyCode scanner = KeyCode.Tab;
@@ -33,6 +35,9 @@ public class InputManager : MonoBehaviour
     public bool IsMovingDown() => Input.GetKey(backward);
     public bool IsMovingLeft() => Input.GetKey(left);
     public bool IsMovingRight() => Input.GetKey(right);
+
+    // Jumping
+    public bool IsJumping() => Input.GetKey(jump);
 
     // Crouch
     public bool IsCrouching() => Input.GetKey(crouch);

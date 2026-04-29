@@ -795,6 +795,11 @@ MonoBehaviour:
   crouchSpeed: 2.5
   standHeight: 2
   crouchHeight: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpHeight: 1
+  groundCheckDistance: 0.1
   deadSpeed: 0
   isDead: 0
 --- !u!114 &4911485509699078967
