@@ -26,8 +26,8 @@ public class PCCamMovement : MonoBehaviour
     {
         if (!isDead)
         {
-            if (Cursor.lockState == CursorLockMode.None)
-                ToggleCursor();
+            //if (Cursor.lockState == CursorLockMode.None)
+                //ToggleCursor();
 
             // Input
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
