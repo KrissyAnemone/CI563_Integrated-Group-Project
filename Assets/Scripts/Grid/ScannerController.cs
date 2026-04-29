@@ -210,5 +210,11 @@ public class ScannerController : MonoBehaviour
         int num = grid.CheckSurroundingMines((int)space.GetRowCol().x, (int)space.GetRowCol().y); 
         text.text = num.ToString(); // Store number in space - possible use for saving
         space.mineNum = num;
+
+        if (space.containType == occupier.Mine)
+        {
+            SonarMine mine = space.obj.GetComponent<SonarMine>();
+            mine.Trigger();
+        }
     }
 }

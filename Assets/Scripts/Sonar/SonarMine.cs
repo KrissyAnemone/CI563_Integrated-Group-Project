@@ -19,13 +19,7 @@ public class SonarMine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!active) return;
-        if (CheckPcInRange())
-        {
-            active = false;
-            enemyScript.SonarTriggered(transform);
-            Debug.Log("Triggered Sonar");
-        }
+        if (CheckPcInRange()) Trigger();
     }
 
     bool CheckPcInRange()
@@ -33,5 +27,13 @@ public class SonarMine : MonoBehaviour
         float distanceToPc = Vector3.Distance(pc.transform.position, transform.position);
         if (distanceToPc <= range) return true;
         return false;
+    }
+
+    public void Trigger()
+    {
+        if (!active) return;
+        active = false;
+        enemyScript.SonarTriggered(transform);
+        Debug.Log("Triggered Sonar");
     }
 }
