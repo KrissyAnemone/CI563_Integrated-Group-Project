@@ -8,6 +8,7 @@ public class ScannerController : MonoBehaviour
     [SerializeField] GameObject mapObj;
     [SerializeField] GameObject sonarPrefab;
     [SerializeField] GameObject testObstaclePrefab;
+    [SerializeField] GameObject spotLightPrefab;
     [SerializeField] GameObject pc;
     [SerializeField] GameObject enemy;
     public int[,] mapToLoad =
@@ -179,6 +180,7 @@ public class ScannerController : MonoBehaviour
             for (int column = 0; column < grid.layerWidth; column++)
             {
                 Space space = grid.GetSpace(column, row);
+                CreateLight(space); // Create Light object
                 space.text = Instantiate(obj); // Instantiate Text object
 
                 // Set transform properties
@@ -199,6 +201,15 @@ public class ScannerController : MonoBehaviour
         }
     }
 
+    private void CreateLight(Space space)
+    {
+        float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth) / 2;
+        float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth) / 2;
+        space.light = Instantiate(spotLightPrefab); // Instantiate Light Object
+        Vector2 spacePos = space.GetWorldPos();
+        space.light.transform.position = new Vector3(spacePos.x - xOffset, 2.7f, spacePos.y + zOffset);
+    }
+
     private void SpaceClickEvent(Space space)
     {
         GameObject textObj = space.text.gameObject;
@@ -216,5 +227,6 @@ public class ScannerController : MonoBehaviour
             SonarMine mine = space.obj.GetComponent<SonarMine>();
             mine.Trigger();
         }
+        space.light.SetActive(true);
     }
 }
