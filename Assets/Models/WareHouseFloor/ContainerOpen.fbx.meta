@@ -5,6 +5,26 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerHandles
+    second: {fileID: 2100000, guid: 14f73b6a10a190e44ab452f57035caad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerInside
+    second: {fileID: 2100000, guid: 31cb22c1dbedee1479cab2759da7208e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerPuller
+    second: {fileID: 2100000, guid: 52c79df427192fb4d8a917d55e854ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerSide
+    second: {fileID: 2100000, guid: 90a23055108b87448989926dbe904438, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ContainerHandles

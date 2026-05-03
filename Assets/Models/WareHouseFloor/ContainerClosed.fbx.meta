@@ -3,7 +3,27 @@ guid: ad82318506639064e8f67e37091e0724
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerHandles
+    second: {fileID: 2100000, guid: 9f353d3455ee5034584abdbec59627a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerInside
+    second: {fileID: 2100000, guid: d32408dc259a9724c8a3476a45176719, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerPuller
+    second: {fileID: 2100000, guid: 4e065e8beb75ee044ba5a5dcd8e1fd8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ContainerSide
+    second: {fileID: 2100000, guid: 79e90ce4b03928840a9b3545d4b06d7e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

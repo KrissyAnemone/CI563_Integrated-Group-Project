@@ -3,7 +3,47 @@ guid: 3332c66296cd11547a0365d4027ad6be
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalTrolley
+    second: {fileID: 2100000, guid: 7985040f00c807040bcbba9dafcc2c3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrolleyCart2
+    second: {fileID: 2100000, guid: 9fca713aa2ee41f4a893987c6f14dbc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrolleyHolder
+    second: {fileID: 2100000, guid: 5436973811f75354c9f117ce54ffee94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrolleyWheel
+    second: {fileID: 2100000, guid: 01d832eac315aa14d8456e9d1766cf1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: openPBR_shader1
+    second: {fileID: 2100000, guid: 5f9211bc766442041a833893d7fa4e20, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LessMossy
+    second: {fileID: 2800000, guid: 53dc9c0526fb08f46bf020b0c3e60de6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolishedMetalic
+    second: {fileID: 2800000, guid: a0fd9edca98d70a4a93468bc69bf02d4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RedMetal
+    second: {fileID: 2800000, guid: ef5a252cd622d84478305ff017cc8276, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
