@@ -3,7 +3,12 @@ guid: adbf136a109b26048b94d2598c685750
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PalletWood
+    second: {fileID: 2800000, guid: 0e26b320d33fd0746be44964612f1f99, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
