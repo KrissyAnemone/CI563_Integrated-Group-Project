@@ -15,6 +15,7 @@ public class EnemyMine : MonoBehaviour
 {
     [Header("Enemy Stats")]
     public Transform enemyHome;
+    public GameObject cursor;
     public MineState currentState = MineState.Idle;
     public MineState lastState = MineState.Idle;
     public float moveSpeed = 3f;
@@ -68,6 +69,8 @@ public class EnemyMine : MonoBehaviour
         }*/
 
         storeSpeed = moveSpeed;
+
+        cursor.SetActive(false);
     }
 
     public void PassGrid(Grid g)
@@ -312,6 +315,7 @@ public class EnemyMine : MonoBehaviour
         moveSpeed = 0f;
 
         screenOver.gameObject.SetActive(true);
+        cursor.SetActive(true);
     }
 
 
