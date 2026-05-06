@@ -8,7 +8,7 @@ public class MinimapController : MonoBehaviour
     [Header("Map/Player Tracking")]
     public Transform player;
     public RectTransform mapRect;
-    public GameObject cursor;
+    public GamepadCursor cursor;
     public Rect mapSize = new(0, 0, 50, 50);
 
     [Header("Scanner Input")]
@@ -46,7 +46,7 @@ public class MinimapController : MonoBehaviour
         // Getting CanvasGroup
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
 
-        cursor.SetActive(false);
+        cursor.SetCursorActive(false);
     }
 
     void Update()
@@ -59,7 +59,7 @@ public class MinimapController : MonoBehaviour
             Debug.Log("On");
             isMapResized = false;
 
-            cursor.SetActive(true);
+            cursor.SetCursorActive(true);
 
             UpdateSize();
         }
@@ -69,7 +69,7 @@ public class MinimapController : MonoBehaviour
             Debug.Log("Off");
             isMapResized = true;
 
-            cursor.SetActive(false);
+            cursor.SetCursorActive(false);
 
             UpdateSize();
         }

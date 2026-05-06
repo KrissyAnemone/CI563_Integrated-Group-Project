@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PCMovement : MonoBehaviour
 {
+    public GamepadCursor cursor;
+
     public Transform orientation;
     public float moveSpeed = 5f;
     public float crouchSpeed = 2.5f;
@@ -28,6 +30,8 @@ public class PCMovement : MonoBehaviour
 
     void Start()
     {
+        cursor.SetCursorActive(false);
+
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
 

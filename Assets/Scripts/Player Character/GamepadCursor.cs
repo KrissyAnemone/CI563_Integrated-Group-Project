@@ -19,6 +19,7 @@ public class GamepadCursor : MonoBehaviour
     private float padding = 50f;
 
     private bool previousMouseState;
+    private bool isActive = false;
     private Mouse virtualMouse;
     private Mouse currentMouse;
     private Camera cam;
@@ -27,6 +28,11 @@ public class GamepadCursor : MonoBehaviour
 
     private const string gamepadScheme = "Gamepad";
     private const string mouseScheme = "Keyboard&Mouse";
+
+    private void Start()
+    {
+        cursorTransform.gameObject.SetActive(false);
+    }
 
     private void OnEnable()
     {
@@ -61,6 +67,9 @@ public class GamepadCursor : MonoBehaviour
 
     private void UpdateMotion()
     {
+        if (!isActive)
+            return;
+
         if (virtualMouse == null || Gamepad.current == null)
             return;
 
@@ -112,5 +121,13 @@ public class GamepadCursor : MonoBehaviour
             AnchorCursor(currentMouse.position.ReadValue());
             previousControlScheme = gamepadScheme;
         }
+    }
+
+    public void SetCursorActive(bool active)
+    {
+        isActive = active;
+
+        cursorTransform.gameObject.SetActive(active);
+        Cursor.visible = !active;
     }
 }
