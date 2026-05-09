@@ -177,7 +177,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!136 &1805127121388545752
 CapsuleCollider:
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ab6c80fda70884fa73e99934dec363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 0}
   orientation: {fileID: 8683591207182413721}
   moveSpeed: 5
   crouchSpeed: 2.5
@@ -241,6 +242,9 @@ MonoBehaviour:
   cam: {fileID: 5217617236529896536}
   ori: {fileID: 8683591207182413721}
   mouseSensitivity: 125
+  controllerSensitivity: 150
+  controllerLookX: RightStickX
+  controllerLookY: RightStickY
   isDead: 0
 --- !u!1 &3377902407926379260
 GameObject:
