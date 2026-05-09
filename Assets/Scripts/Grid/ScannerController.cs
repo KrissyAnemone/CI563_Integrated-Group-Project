@@ -226,6 +226,8 @@ public class ScannerController : MonoBehaviour
         {
             SonarMine mine = space.obj.GetComponent<SonarMine>();
             mine.Trigger();
+
+            text.text = "!";
         }
         space.light.SetActive(true);
     }
