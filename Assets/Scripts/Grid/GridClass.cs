@@ -103,6 +103,7 @@ public class Space
 
     public int mineNum = 0;
     public GameObject text = null;
+    public GameObject light = null;
 
     public Space(int x, int z, float width) // Constructor
     {
