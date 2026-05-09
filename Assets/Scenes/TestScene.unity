@@ -3026,8 +3026,9 @@ GameObject:
   - component: {fileID: 670269833}
   - component: {fileID: 670269832}
   - component: {fileID: 670269831}
+  - component: {fileID: 670269835}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: EndGameTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3112,13 +3113,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670269830}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.79, y: 2.13, z: 37.46}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -58.554535, y: 8.013722, z: 4.899376}
   m_LocalScale: {x: 11.029801, y: 1.8662, z: 1.8662}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2018621837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670269835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670269830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be54292217f35434abbdaf70da451cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &671096601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9366,6 +9379,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1314473933}
+  - {fileID: 670269834}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2039317652
@@ -9811,4 +9825,3 @@ SceneRoots:
   - {fileID: 277485797}
   - {fileID: 98808877}
   - {fileID: 2018621837}
-  - {fileID: 670269834}

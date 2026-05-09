@@ -314,7 +314,7 @@ public class EnemyMine : MonoBehaviour
 
         screenOver.gameObject.SetActive(true);
         cursor.SetCursorActive(true);
-    }
+    }   
 
 
     void OnDrawGizmos()
