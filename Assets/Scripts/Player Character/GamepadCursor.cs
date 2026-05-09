@@ -60,9 +60,13 @@ public class GamepadCursor : MonoBehaviour
 
     private void OnDisable()
     {
-        InputSystem.RemoveDevice(virtualMouse);
         InputSystem.onAfterUpdate -= UpdateMotion;
-        playerInput.onControlsChanged -= OnControlsChanged;
+
+        if (playerInput != null)
+            playerInput.onControlsChanged -= OnControlsChanged;
+
+        if (virtualMouse != null && virtualMouse.added)
+            InputSystem.RemoveDevice(virtualMouse);
     }
 
     private void UpdateMotion()
@@ -106,6 +110,12 @@ public class GamepadCursor : MonoBehaviour
 
     private void OnControlsChanged(PlayerInput input)
     {
+        if (cursorTransform == null)
+            return;
+
+        if (currentMouse == null)
+            return;
+
         if (playerInput.currentControlScheme == mouseScheme && previousControlScheme != mouseScheme)
         {
             cursorTransform.gameObject.SetActive(false);
@@ -115,10 +125,14 @@ public class GamepadCursor : MonoBehaviour
         }
         else if (playerInput.currentControlScheme == gamepadScheme && previousControlScheme != gamepadScheme)
         {
+            isActive = true;
+
             cursorTransform.gameObject.SetActive(true);
             Cursor.visible = false;
+
             InputState.Change(virtualMouse.position, currentMouse.position.ReadValue());
             AnchorCursor(currentMouse.position.ReadValue());
+
             previousControlScheme = gamepadScheme;
         }
     }

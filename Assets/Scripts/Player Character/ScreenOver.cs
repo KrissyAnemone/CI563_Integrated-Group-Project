@@ -7,12 +7,6 @@ public class ScreenOver : MonoBehaviour
 {
     public string sceneName;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void Retry()
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
