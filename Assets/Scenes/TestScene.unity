@@ -573,7 +573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHome: {fileID: 0}
-  cursor: {fileID: 0}
   currentState: 0
   lastState: 0
   moveSpeed: 3
@@ -9629,7 +9628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream
       value: 17.451
+=======
+      value: -1.66
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2490727065649231113, guid: 85b69257595cefb40b53f35b22c27cf3, type: 3}
       propertyPath: m_LocalPosition.z

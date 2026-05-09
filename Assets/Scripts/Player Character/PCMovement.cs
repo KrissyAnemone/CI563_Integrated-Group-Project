@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class PCMovement : MonoBehaviour
 {
+    [Header("Player Movement")]
     public Transform orientation;
     public float moveSpeed = 5f;
     public float crouchSpeed = 2.5f;
+
+    [Header("Crouching")]
+    public Transform cameraHolder;
     public float standHeight = 2f;
-    public float crouchHeight = 1f;
+    public float crouchHeight = .5f;
+    public float crouchCameraY = 0.5f;
+    public float crouchCameraOffset = 1.6f;
+    public float cameraSmooth = 10f;
 
     public bool IsCrouching { get; private set; }
 
+    [Header("Jumping")]
     public LayerMask groundLayer;
     public float jumpHeight = 2f;
     public float groundCheckDistance = 0.1f;
 
+    [Header("Dead")]
     public float deadSpeed = 0;
     public bool isDead = false;
 
@@ -24,6 +33,7 @@ public class PCMovement : MonoBehaviour
     private float storeSpeed;
     private float standCenterY;
     private float crouchCenterY;
+    private float defaultCameraY;
     private bool isGrounded;
 
     void Start()
@@ -39,16 +49,15 @@ public class PCMovement : MonoBehaviour
 
         // Calculate crouch values
         crouchCenterY = standCenterY - (standHeight - crouchHeight) / 2f;
+        defaultCameraY = cameraHolder.localPosition.y;
     }
 
     void FixedUpdate()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, (col.height / 2f) + groundCheckDistance, groundLayer);
+        isGrounded = CheckGrounded();
 
         if (!isDead)
         {
-            moveSpeed = storeSpeed;
-
             // Check for jump
             if (InputManager.Instance.IsJumping() && isGrounded)
                 Jump();
@@ -97,6 +106,23 @@ public class PCMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
     }
 
+    private bool CheckGrounded()
+    {
+        RaycastHit hit;
+
+        float rayLength = (col.height / 2f) + groundCheckDistance;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, rayLength))
+        {
+            // Reject steep surfaces (walls)
+            float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
+
+            return slopeAngle < 45f;
+        }
+
+        return false;
+    }
+
     void HandleCrouch()
     {
         if (InputManager.Instance.IsCrouching())
@@ -109,6 +135,19 @@ public class PCMovement : MonoBehaviour
             if (IsCrouching && CanStand())
                 ExitCrouch();
         }
+
+        HandleCameraHeight();
+    }
+
+    void HandleCameraHeight()
+    {
+        float targetY = IsCrouching ? defaultCameraY - crouchCameraOffset : defaultCameraY;
+
+        Vector3 pos = cameraHolder.localPosition;
+
+        pos.y = Mathf.Lerp(pos.y, targetY, Time.fixedDeltaTime * cameraSmooth);
+
+        cameraHolder.localPosition = pos;
     }
 
     void EnterCrouch()
@@ -133,6 +172,19 @@ public class PCMovement : MonoBehaviour
 
     bool CanStand()
     {
-        return !Physics.Raycast(transform.position, Vector3.up, standHeight);
+        float radius = col.radius * 0.95f;
+
+        Vector3 point1 = transform.position + Vector3.up * radius;
+        Vector3 point2 = transform.position + Vector3.up * (standHeight - radius);
+
+        Collider[] hits = Physics.OverlapCapsule(point1, point2, radius);
+
+        foreach (Collider hit in hits)
+        {
+            if (hit != col)
+                return false;
+        }
+
+        return true;
     }
 }
