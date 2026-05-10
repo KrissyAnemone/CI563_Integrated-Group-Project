@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour
     {
         DetectInputDevice();
 
-        Debug.Log(CurrentDevice);
+        //Debug.Log(CurrentDevice);
     }
 
     void DetectInputDevice()

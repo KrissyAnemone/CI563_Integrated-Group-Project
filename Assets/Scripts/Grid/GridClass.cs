@@ -62,6 +62,22 @@ public class Grid
         }
     }
 
+    public void OverwriteSpaceType(Vector2Int gridPos, int value)
+    {
+        Space space = spaces[gridPos.x, gridPos.y];
+        space.containType = GetSpaceType(value);
+
+        if (value == 1)
+        {
+            Vector2 worldPos = space.GetWorldPos();
+            space.obj = scannerScript.CreateObject(space.containType, worldPos.x, worldPos.y);
+        }
+        else if (space.obj != null)
+        {
+            scannerScript.DestroyObj(space.obj);
+        }
+    }
+
     public GameObject CreateObject(occupier occ, float x, float z)
     {
         if (!scannerScript) return null;
@@ -84,6 +100,24 @@ public class Grid
             }
         }
         return mines;
+    }
+
+    public Vector2Int WorldToGrid(Vector3 world)
+    {
+        /*int x = Mathf.RoundToInt(world.x / grid.spaceWidth);
+        int z = Mathf.RoundToInt(world.z / grid.spaceWidth);
+
+        x = Mathf.Clamp(x, 0, grid.layerWidth - 1);
+        z = Mathf.Clamp(z, 0, grid.layerHeight - 1);
+
+        return new Vector2Int(x, z);*/
+        float xPos = world.x + (layerWidth * spaceWidth) / 2;
+        float zPos = world.z - (layerHeight * spaceWidth) / 2;
+
+        int col = (int)(xPos / spaceWidth);
+        int row = -(int)(zPos / spaceWidth);
+
+        return new Vector2Int(col, row);
     }
 
 
@@ -110,6 +144,4 @@ public class Space
         worldPos = new Vector2(x*width, -z*width);
         rowCol = new Vector2Int(x, z);
     }
-    
-
 }

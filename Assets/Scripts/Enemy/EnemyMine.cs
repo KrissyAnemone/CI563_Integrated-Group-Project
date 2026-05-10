@@ -182,7 +182,7 @@ public class EnemyMine : MonoBehaviour
         currentGridPos = WorldToGrid(transform.position);
     }
 
-    Vector2Int WorldToGrid(Vector3 world)
+    public Vector2Int WorldToGrid(Vector3 world)
     {
         /*int x = Mathf.RoundToInt(world.x / grid.spaceWidth);
         int z = Mathf.RoundToInt(world.z / grid.spaceWidth);

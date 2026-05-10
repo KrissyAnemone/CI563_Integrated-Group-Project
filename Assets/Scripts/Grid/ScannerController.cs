@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ScannerController : MonoBehaviour
 {
     public Grid grid;
+    public bool loadedGrid = false;
     [SerializeField] GameObject mapObj;
     [SerializeField] GameObject sonarPrefab;
     [SerializeField] GameObject testObstaclePrefab;
@@ -130,7 +131,7 @@ public class ScannerController : MonoBehaviour
         CreateMineText();
 
         FindObjectOfType<EnemyMine>().PassGrid(grid);
-
+        loadedGrid = true;
     }
 
 
@@ -173,7 +174,8 @@ public class ScannerController : MonoBehaviour
 
                 float xOffset = ((grid.layerWidth * grid.spaceWidth) - grid.spaceWidth) / 2;
                 float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth) / 2;
-                sonar.transform.position = new Vector3(x - xOffset, 0, z + zOffset);
+                sonar.transform.position = new Vector3(x - xOffset, 1.5f, z + zOffset);
+                sonar.transform.parent = transform;
                 return sonar;
             }
         }
@@ -249,6 +251,12 @@ public class ScannerController : MonoBehaviour
         space.light = Instantiate(spotLightPrefab); // Instantiate Light Object
         Vector2 spacePos = space.GetWorldPos();
         space.light.transform.position = new Vector3(spacePos.x - xOffset, 3.2f, spacePos.y + zOffset);
+        space.light.transform.parent = transform;
+    }
+
+    public void DestroyObj(GameObject obj)
+    {
+        Destroy(obj);
     }
 
     private void SpaceClickEvent(Space space)
@@ -267,6 +275,7 @@ public class ScannerController : MonoBehaviour
         {
             SonarMine mine = space.obj.GetComponent<SonarMine>();
             mine.Trigger();
+            text.text = "!";
         }
         space.light.SetActive(true);
     }
