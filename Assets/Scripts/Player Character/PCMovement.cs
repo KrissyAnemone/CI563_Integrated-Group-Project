@@ -8,6 +8,7 @@ public class PCMovement : MonoBehaviour
     public Transform orientation;
     public float moveSpeed = 5f;
     public float crouchSpeed = 2.5f;
+    public bool frozen = false;
 
     [Header("Crouching")]
     public Transform cameraHolder;
@@ -56,7 +57,7 @@ public class PCMovement : MonoBehaviour
     {
         isGrounded = CheckGrounded();
 
-        if (!isDead)
+        if (!isDead && !frozen)
         {
             // Check for jump
             if (InputManager.Instance.IsJumping() && isGrounded)
