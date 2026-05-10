@@ -312,13 +312,7 @@ public class EnemyMine : MonoBehaviour
         moveSpeed = 0f;
 
         screenOver.gameObject.SetActive(true);
-<<<<<<< Updated upstream
-        cursor.SetCursorActive(true);
-    }   
-=======
     }
->>>>>>> Stashed changes
-
 
     void OnDrawGizmos()
     {
