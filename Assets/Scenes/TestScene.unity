@@ -130,10 +130,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (4)
@@ -265,10 +261,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (20)
@@ -331,10 +323,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (19)
@@ -565,10 +553,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (28)
@@ -641,10 +625,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (55)
@@ -804,10 +784,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (3)
@@ -825,10 +801,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (99)
@@ -891,10 +863,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (50)
@@ -1080,10 +1048,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (51)
@@ -1186,10 +1150,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (1)
@@ -1212,10 +1172,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (133)
@@ -1278,10 +1234,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (62)
@@ -1475,10 +1427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (73)
@@ -1541,10 +1489,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (8)
@@ -1607,10 +1551,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (17)
@@ -1678,10 +1618,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (16)
@@ -1749,10 +1685,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (131)
@@ -2307,10 +2239,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (69)
@@ -2378,18 +2306,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 277485797}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: da90ed38ed0bff8489c0f542aba9b640, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.65529
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: da90ed38ed0bff8489c0f542aba9b640, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.65529
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: da90ed38ed0bff8489c0f542aba9b640, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.65529
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da90ed38ed0bff8489c0f542aba9b640, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.97
@@ -2589,10 +2505,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (9)
@@ -2655,10 +2567,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (90)
@@ -2726,10 +2634,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (3)
@@ -2787,10 +2691,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (18)
@@ -2853,10 +2753,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (105)
@@ -2919,10 +2815,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (57)
@@ -3054,10 +2946,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (11)
@@ -3238,10 +3126,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (5)
@@ -3264,10 +3148,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (78)
@@ -3330,10 +3210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (103)
@@ -3453,10 +3329,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (31)
@@ -3785,10 +3657,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (10)
@@ -3806,10 +3674,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (45)
@@ -3872,10 +3736,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (89)
@@ -4067,10 +3927,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (2)
@@ -4088,10 +3944,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (132)
@@ -4253,10 +4105,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (80)
@@ -4319,10 +4167,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (6)
@@ -4385,10 +4229,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (97)
@@ -4451,10 +4291,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (13)
@@ -4890,10 +4726,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (93)
@@ -5025,10 +4857,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (64)
@@ -5217,10 +5045,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (47)
@@ -5369,10 +5193,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (166)
@@ -5435,10 +5255,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (65)
@@ -5535,10 +5351,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (44)
@@ -5862,10 +5674,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (10)
@@ -5928,10 +5736,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (37)
@@ -5994,10 +5798,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (60)
@@ -6162,10 +5962,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (129)
@@ -6233,10 +6029,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (107)
@@ -6473,10 +6265,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (79)
@@ -6539,10 +6327,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (70)
@@ -6605,10 +6389,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (32)
@@ -6671,10 +6451,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (1)
@@ -6928,10 +6704,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (5)
@@ -7067,10 +6839,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (30)
@@ -7629,10 +7397,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (24)
@@ -7762,10 +7526,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (122)
@@ -7946,10 +7706,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (126)
@@ -8050,10 +7806,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1244642971077765786, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
@@ -8282,10 +8034,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (63)
@@ -8417,10 +8165,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (85)
@@ -8646,10 +8390,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (83)
@@ -8712,10 +8452,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (159)
@@ -8778,10 +8514,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (68)
@@ -8975,10 +8707,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (158)
@@ -9311,10 +9039,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (72)
@@ -9377,10 +9101,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (123)
@@ -9802,10 +9522,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (4)
@@ -10023,10 +9739,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (157)
@@ -10094,10 +9806,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (21)
@@ -10612,10 +10320,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (101)
@@ -11047,10 +10751,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (25)
@@ -11274,10 +10974,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (128)
@@ -11340,10 +11036,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (95)
@@ -11468,10 +11160,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (67)
@@ -11534,10 +11222,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (163)
@@ -11600,10 +11284,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (48)
@@ -11735,10 +11415,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (77)
@@ -11801,10 +11477,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (71)
@@ -11867,10 +11539,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (46)
@@ -12017,10 +11685,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (156)
@@ -12083,10 +11747,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (3)
@@ -12159,10 +11819,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (125)
@@ -12304,10 +11960,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (82)
@@ -12370,10 +12022,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (34)
@@ -12534,10 +12182,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (29)
@@ -12600,10 +12244,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (53)
@@ -12908,10 +12548,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (9)
@@ -13003,10 +12639,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (33)
@@ -13233,10 +12865,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (41)
@@ -13299,10 +12927,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (87)
@@ -13365,10 +12989,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (98)
@@ -13500,10 +13120,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (92)
@@ -13571,10 +13187,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (56)
@@ -13744,10 +13356,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (8)
@@ -13765,10 +13373,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (23)
@@ -13831,10 +13435,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (162)
@@ -14006,10 +13606,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (42)
@@ -14169,10 +13765,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (76)
@@ -14368,10 +13960,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator
@@ -14467,10 +14055,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1244642971077765786, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
@@ -14757,10 +14341,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (102)
@@ -14828,10 +14408,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (130)
@@ -14894,10 +14470,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (61)
@@ -14960,10 +14532,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (164)
@@ -15095,10 +14663,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (81)
@@ -15161,10 +14725,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (91)
@@ -15430,10 +14990,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (2)
@@ -15548,10 +15104,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (127)
@@ -15614,10 +15166,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (100)
@@ -15680,10 +15228,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (40)
@@ -15892,10 +15436,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (84)
@@ -15958,10 +15498,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (165)
@@ -16197,10 +15733,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (15)
@@ -16443,10 +15975,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (94)
@@ -16514,10 +16042,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (35)
@@ -16580,10 +16104,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (124)
@@ -16656,10 +16176,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (49)
@@ -16795,10 +16311,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (39)
@@ -16861,10 +16373,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (74)
@@ -16927,10 +16435,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (161)
@@ -17038,10 +16542,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (6)
@@ -17138,10 +16638,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (12)
@@ -17204,10 +16700,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (134)
@@ -17270,10 +16762,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (96)
@@ -17336,10 +16824,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (26)
@@ -17473,10 +16957,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (27)
@@ -17539,10 +17019,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (52)
@@ -17674,10 +17150,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (104)
@@ -17909,10 +17381,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (38)
@@ -17975,10 +17443,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (108)
@@ -18266,10 +17730,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (58)
@@ -18337,10 +17797,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (43)
@@ -18408,10 +17864,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (2)
@@ -18474,10 +17926,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (4)
@@ -18540,10 +17988,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (59)
@@ -18606,10 +18050,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (36)
@@ -18756,10 +18196,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (86)
@@ -18895,10 +18331,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (7)
@@ -18961,10 +18393,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (106)
@@ -19101,10 +18529,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (1)
@@ -19167,10 +18591,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (22)
@@ -19316,10 +18736,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (88)
@@ -19731,10 +19147,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (14)
@@ -19887,10 +19299,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (75)
@@ -20104,10 +19512,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (54)
@@ -20185,10 +19589,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (66)
@@ -20251,10 +19651,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator (160)
@@ -20475,10 +19871,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366614603}
     m_Modifications:
-    - target: {fileID: 4898490472947659880, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5128580790694895326, guid: d4e12f90880fbb2408f5b6e15936fb31, type: 3}
       propertyPath: m_Name
       value: WallIndicator
