@@ -166,6 +166,7 @@ MonoBehaviour:
   explodeDis: 10
   viewAngle: 180
   player: {fileID: 0}
+  screenOver: {fileID: 0}
 --- !u!1 &9097113119117216502
 GameObject:
   m_ObjectHideFlags: 0

@@ -10523,6 +10523,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5101776627197258293, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
+      propertyPath: explodeDis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101776627197258293, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: screenOver
       value: 
       objectReference: {fileID: 1234736595}

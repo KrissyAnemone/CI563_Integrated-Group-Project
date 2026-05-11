@@ -112,6 +112,10 @@ public class EnemyPathfinding
         }
 
         path.Reverse();
+
+        if (path.Count > 0)
+            path.RemoveAt(0);
+
         return path;
     }
 
