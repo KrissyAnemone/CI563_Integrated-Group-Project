@@ -9,6 +9,8 @@ public class PCMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float crouchSpeed = 2.5f;
     public bool frozen = false;
+    bool moving = false;
+    public AudioSource stepSoundSource;
 
     [Header("Crouching")]
     public Transform cameraHolder;
@@ -51,6 +53,8 @@ public class PCMovement : MonoBehaviour
         // Calculate crouch values
         crouchCenterY = standCenterY - (standHeight - crouchHeight) / 2f;
         defaultCameraY = cameraHolder.localPosition.y;
+
+        stepSoundSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -96,9 +100,26 @@ public class PCMovement : MonoBehaviour
             velocity.y = rb.velocity.y;
 
             rb.velocity = velocity;
+
+            moving = (!(velocity.x == 0  && velocity.z == 0));
+            if (moving && !stepSoundSource.isPlaying)
+            {
+                stepSoundSource.Play();
+            }
+            else if (!moving && stepSoundSource.isPlaying)
+            {
+                stepSoundSource.Stop();
+            }
+            if (!isGrounded)
+            {
+                stepSoundSource.Stop();
+            }
         }
-        else if (isDead)
-            moveSpeed = deadSpeed;
+        else
+        {
+            if (stepSoundSource.isPlaying) stepSoundSource.Stop();
+            if (isDead) moveSpeed = deadSpeed;
+        }
     }
 
     void Jump()

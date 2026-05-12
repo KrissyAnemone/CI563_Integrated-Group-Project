@@ -12,6 +12,7 @@ public class ScannerController : MonoBehaviour
     [SerializeField] GameObject spotLightPrefab;
     [SerializeField] GameObject pc;
     [SerializeField] GameObject enemy;
+    AudioSource audioSource;
     public int[,] mapToLoad =
     {
         /*
@@ -132,6 +133,8 @@ public class ScannerController : MonoBehaviour
 
         FindObjectOfType<EnemyMine>().PassGrid(grid);
         loadedGrid = true;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -250,7 +253,7 @@ public class ScannerController : MonoBehaviour
         float zOffset = ((grid.layerHeight * grid.spaceWidth) - grid.spaceWidth) / 2;
         space.light = Instantiate(spotLightPrefab); // Instantiate Light Object
         Vector2 spacePos = space.GetWorldPos();
-        space.light.transform.position = new Vector3(spacePos.x - xOffset, 3.2f, spacePos.y + zOffset);
+        space.light.transform.position = new Vector3(spacePos.x - xOffset, 4f, spacePos.y + zOffset);
         space.light.transform.parent = transform;
     }
 
@@ -278,5 +281,7 @@ public class ScannerController : MonoBehaviour
             text.text = "!";
         }
         space.light.SetActive(true);
+
+        audioSource.Play();
     }
 }
