@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (4)
@@ -1567,6 +1571,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -4216,6 +4224,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (8)
@@ -4345,6 +4357,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -5557,6 +5573,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator
@@ -5938,6 +5958,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -6327,6 +6351,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (16)
@@ -6633,6 +6661,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -7497,6 +7529,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -12387,6 +12423,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (1)
@@ -13439,6 +13479,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -16527,6 +16571,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (3)
@@ -16589,6 +16637,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -17011,6 +17063,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (2)
@@ -17251,6 +17307,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -17638,6 +17698,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -21583,6 +21647,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422125274601219699, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Name
       value: MineIndicator (14)
@@ -22601,6 +22669,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801429907837299707, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678357281622671901, guid: bfd6514f2f9a2004098ca4f76f5e6c67, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
