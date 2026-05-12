@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac8a3d7ed1b2145a473e6cd81a8f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadedGrid: 0
   mapObj: {fileID: 0}
-  sonarPrefab: {fileID: 0}
+  sonarPrefab: {fileID: 340226921800332635, guid: 720e7641abc88554b8944984ba593cf2, type: 3}
+  testObstaclePrefab: {fileID: 340226921800332635, guid: eae56dad07eb01742a5ec82426287ad7, type: 3}
+  spotLightPrefab: {fileID: 8125848730952142228, guid: b0fb57d8e27809f409a32325705cf290, type: 3}
   pc: {fileID: 0}
   enemy: {fileID: 0}
 --- !u!114 &1867403286135958789
