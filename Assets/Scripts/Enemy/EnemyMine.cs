@@ -49,6 +49,10 @@ public class EnemyMine : MonoBehaviour
     private float chaseTimer;
     private float chaseUpdateRate = 0.5f;
 
+    // SFX
+    public AudioClip whirClip;
+    AudioSource audioSource;
+
     void Start()
     {
         // Grid now passed from Scanner when finished creating Grid
@@ -68,6 +72,7 @@ public class EnemyMine : MonoBehaviour
         }*/
 
         storeSpeed = moveSpeed;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     public void PassGrid(Grid g)
@@ -90,6 +95,15 @@ public class EnemyMine : MonoBehaviour
         {
             Vector2Int noiseGrid = WorldToGrid(player.transform.position);
             BeginPath(noiseGrid);
+        }
+
+        if (currentPath != null && currentPath.Count > 0) // Control Audio
+        {
+            if (!audioSource.isPlaying) audioSource.Play();
+        }
+        else
+        {
+            if (audioSource.isPlaying) audioSource.Stop();
         }
 
         switch (currentState)

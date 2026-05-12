@@ -10,6 +10,8 @@ public class ReceiveAnimEvent : MonoBehaviour
     public GameObject ventMine;
     Animation mineAnim;
 
+    public GameObject ventAnimTrigger;
+
     public GameObject ventCamera;
     private void Start()
     {
@@ -20,6 +22,7 @@ public class ReceiveAnimEvent : MonoBehaviour
     public void StartMineMove()
     {
         mineAnim.Play();
+        ventMine.GetComponent<AudioSource>().Play();
     }
 
     public void EndMineMove()
@@ -29,6 +32,7 @@ public class ReceiveAnimEvent : MonoBehaviour
 
         pcMove.frozen = false;
 
+        if (ventAnimTrigger) Destroy(ventAnimTrigger);
         Destroy(ventCamera);
         Destroy(ventMine);
     }
