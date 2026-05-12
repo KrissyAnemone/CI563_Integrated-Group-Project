@@ -329,6 +329,9 @@ public class EnemyMine : MonoBehaviour
         PCMovement playerMovement = player.GetComponent<PCMovement>();
 
         audioSource.PlayOneShot(explosionSFX);
+        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(2).gameObject.SetActive(false);
 
         playerCam.isDead = true;
         playerMovement.isDead = true;
