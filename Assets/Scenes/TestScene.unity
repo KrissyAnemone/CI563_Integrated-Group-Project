@@ -11852,6 +11852,10 @@ PrefabInstance:
       propertyPath: screenOver
       value: 
       objectReference: {fileID: 1234736595}
+    - target: {fileID: 5101776627197258293, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
+      propertyPath: explosionSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: bf6b0606954b32d49988626cf915d8f1, type: 3}
     - target: {fileID: 5755419077574837080, guid: 55c5569c146d86a4f9de26cbd2b7cc9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.96

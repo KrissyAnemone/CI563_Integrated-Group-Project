@@ -20,6 +20,7 @@ public class EnemyMine : MonoBehaviour
     public float moveSpeed = 3f;
     public float waitTarget = 3f;
     public float hearDis = 6f;
+    bool exploded = false;
 
     [Header("Enemy Vision")]
     public LayerMask obstacleMask;
@@ -50,7 +51,7 @@ public class EnemyMine : MonoBehaviour
     private float chaseUpdateRate = 0.5f;
 
     // SFX
-    public AudioClip whirClip;
+    public AudioClip explosionSFX;
     AudioSource audioSource;
 
     void Start()
@@ -321,9 +322,13 @@ public class EnemyMine : MonoBehaviour
 
     void Explode()
     {
+        if (exploded) return;
+        exploded = true;
         // Implement death screen
         PCCamMovement playerCam = player.GetComponent<PCCamMovement>();
         PCMovement playerMovement = player.GetComponent<PCMovement>();
+
+        audioSource.PlayOneShot(explosionSFX);
 
         playerCam.isDead = true;
         playerMovement.isDead = true;
