@@ -138,15 +138,20 @@ public class EnemyMine : MonoBehaviour
         targetWorld.x += grid.spaceWidth / 2;
         targetWorld.z -= grid.spaceWidth / 2;
 
-        Vector3 moveDir = (targetWorld - transform.position);
+        Vector3 moveDir = targetWorld - transform.position;
 
-        if (moveDir != Vector3.zero)
+        moveDir.y = 0f;
+
+        if (moveDir.sqrMagnitude > 0.001f)
         {
-            Quaternion targetRot = Quaternion.LookRotation(moveDir);
+            Quaternion targetRot = Quaternion.LookRotation(moveDir.normalized);
+
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 8f * Time.deltaTime);
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, targetWorld, moveSpeed * Time.deltaTime);
+        Vector3 flatTarget = new Vector3(targetWorld.x, transform.position.y, targetWorld.z);
+
+        transform.position = Vector3.MoveTowards(transform.position, flatTarget, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, targetWorld) < 0.05f)
             pathIndex++;
@@ -154,6 +159,9 @@ public class EnemyMine : MonoBehaviour
 
     void BeginPath(Vector2Int target)
     {
+        if (target == targetGridPos && currentPath != null)
+            return;
+
         UpdateGridPos();
 
         targetGridPos = target;
@@ -172,9 +180,7 @@ public class EnemyMine : MonoBehaviour
             Debug.Log("GO SEARCH");
         }
         else
-        {
             Debug.Log("NULLL");
-        }
     }
 
     void UpdateGridPos()
@@ -209,7 +215,7 @@ public class EnemyMine : MonoBehaviour
         float worldX = xPos - (grid.layerWidth * grid.spaceWidth) / 2;
         float worldZ = zPos + (grid.layerHeight * grid.spaceWidth) / 2;
 
-        return new Vector3(worldX, 1.125f, worldZ);
+        return new Vector3(worldX, 0f, worldZ);
 
     }
 
@@ -240,14 +246,13 @@ public class EnemyMine : MonoBehaviour
         {
             Vector2Int playerGrid = WorldToGrid(player.transform.position);
 
-            if (playerGrid != lastPlayerGrid)
-            {
+            if (playerGrid != lastPlayerGrid && Vector3.Distance(transform.position, player.transform.position) > explodeDis)
+            { 
                 BeginPath(playerGrid);
                 lastPlayerGrid = playerGrid;
             }
 
             chaseTimer = chaseUpdateRate;
-             
         }
 
         Search();
